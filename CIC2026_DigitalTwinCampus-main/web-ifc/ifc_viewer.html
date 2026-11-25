@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IFC Model Viewer - Metropolia Digital Twin</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #0f1117;
+    color: #e0e0e0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* Header */
+  #header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 52px;
+    background: #1a1d25;
+    border-bottom: 1px solid #2a2d35;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+    gap: 16px;
+  }
+
+  #header h1 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  #header .separator {
+    width: 1px;
+    height: 24px;
+    background: #3a3d45;
+  }
+
+  /* Upload area */
+  #upload-zone {
+    position: fixed;
+    top: 52px; left: 0; right: 0; bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    background: #0f1117;
+    transition: opacity 0.3s;
+  }
+
+  #upload-zone.hidden { display: none; }
+
+  #drop-area {
+    width: 520px;
+    max-width: 90vw;
+    padding: 60px 40px;
+    border: 2px dashed #3a3d55;
+    border-radius: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #14161e;
+  }
+
+  #drop-area:hover, #drop-area.dragover {
+    border-color: #4a8cff;
+    background: #181c28;
+    box-shadow: 0 0 40px rgba(74, 140, 255, 0.08);
+  }
+
+  #drop-area svg {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+    fill: #4a5568;
+  }
+
+  #drop-area h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #c0c4cc;
+    margin-bottom: 8px;
+  }
+
+  #drop-area p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+  }
+
+  #drop-area .btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  #drop-area .btn:hover { background: #2563eb; }
+
+  #file-input { display: none; }
+
+  /* 3D Canvas */
+  #viewer-container {
+    position: fixed;
+    top: 52px; left: 0; right: 0; bottom: 0;
+    display: none;
+  }
+
+  #viewer-container.active { display: block; }
+
+  #three-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* Loading overlay */
+  #loading-overlay {
+    position: fixed;
+    top: 52px; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 17, 23, 0.92);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 90;
+  }
+
+  #loading-overlay.active { display: flex; }
+
+  .spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid #2a2d35;
+    border-top: 4px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-bottom: 20px;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  #loading-text {
+    font-size: 15px;
+    color: #9ca3af;
+  }
+
+  #loading-progress {
+    width: 300px;
+    max-width: 80vw;
+    height: 4px;
+    background: #2a2d35;
+    border-radius: 2px;
+    margin-top: 16px;
+    overflow: hidden;
+  }
+
+  #loading-bar {
+    height: 100%;
+    background: #3b82f6;
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.3s;
+  }
+
+  /* Info panel */
+  #info-panel {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    background: rgba(26, 29, 37, 0.92);
+    border: 1px solid #2a2d35;
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 13px;
+    line-height: 1.6;
+    z-index: 80;
+    display: none;
+    backdrop-filter: blur(12px);
+    min-width: 260px;
+  }
+
+  #info-panel.active { display: block; }
+
+  #info-panel .title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #info-panel .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0;
+  }
+
+  #info-panel .label { color: #6b7280; }
+  #info-panel .value { color: #d1d5db; font-weight: 500; }
+
+  /* Controls hint */
+  #controls-hint {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background: rgba(26, 29, 37, 0.85);
+    border: 1px solid #2a2d35;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 12px;
+    color: #6b7280;
+    z-index: 80;
+    display: none;
+    backdrop-filter: blur(12px);
+    line-height: 1.8;
+  }
+
+  #controls-hint.active { display: block; }
+  #controls-hint kbd {
+    background: #2a2d35;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: #9ca3af;
+  }
+
+  /* Toolbar */
+  #toolbar {
+    display: none;
+    align-items: center;
+    gap: 6px;
+  }
+
+  #toolbar.active { display: flex; }
+
+  .tool-btn {
+    padding: 6px 14px;
+    background: #22252e;
+    border: 1px solid #2a2d35;
+    border-radius: 6px;
+    color: #9ca3af;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+
+  .tool-btn:hover { background: #2a2d38; color: #e0e0e0; border-color: #3a3d45; }
+  .tool-btn.active-btn { background: #3b82f6; color: #fff; border-color: #3b82f6; }
+
+  /* Axes helper label */
+  #axes-label {
+    position: fixed;
+    top: 62px;
+    right: 16px;
+    font-size: 11px;
+    color: #4a5568;
+    z-index: 80;
+    display: none;
+  }
+
+  /* Sensor file input */
+  #sensor-file-input { display: none; }
+
+  /* Temperature legend */
+  #temp-legend {
+    position: fixed;
+    top: 70px;
+    left: 16px;
+    background: rgba(26, 29, 37, 0.92);
+    border: 1px solid #2a2d35;
+    border-radius: 12px;
+    padding: 16px;
+    z-index: 80;
+    display: none;
+    backdrop-filter: blur(12px);
+    min-width: 180px;
+  }
+
+  #temp-legend.active { display: block; }
+
+  .legend-title {
+    font-weight: 600;
+    font-size: 13px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .legend-row {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .legend-bar {
+    width: 20px;
+    height: 150px;
+    border-radius: 4px;
+    margin-right: 12px;
+    background: linear-gradient(to bottom, #ff0000, #ff8c00, #ffcc00, #00cc00, #00cccc, #0066ff);
+  }
+
+  .legend-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #9ca3af;
+    padding: 2px 0;
+  }
+
+  .legend-stats {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #2a2d35;
+    font-size: 11px;
+    color: #6b7280;
+    line-height: 1.8;
+  }
+
+  .legend-stats .val { color: #d1d5db; font-weight: 500; }
+
+  .legend-type-buttons {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+
+  .legend-type-btn {
+    flex: 1;
+    padding: 5px 0;
+    background: #22252e;
+    border: 1px solid #2a2d35;
+    border-radius: 5px;
+    color: #6b7280;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .legend-type-btn:hover { background: #2a2d38; color: #e0e0e0; }
+  .legend-type-btn.active-type { background: #3b82f6; color: #fff; border-color: #3b82f6; }
+
+  .legend-toggle {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 7px 0;
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .legend-toggle:hover { background: #2563eb; }
+  .legend-toggle.off { background: #4b5563; }
+  .legend-toggle.off:hover { background: #6b7280; }
+
+  /* Hover tooltip */
+  #tooltip {
+    position: fixed;
+    background: rgba(26, 29, 37, 0.95);
+    border: 1px solid #3b82f6;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 12px;
+    color: #e0e0e0;
+    z-index: 200;
+    pointer-events: none;
+    display: none;
+    backdrop-filter: blur(8px);
+    line-height: 1.6;
+    max-width: 280px;
+  }
+
+  #tooltip .tt-room { font-weight: 600; color: #fff; font-size: 13px; }
+  #tooltip .tt-temp { font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div id="header">
+  <h1>IFC Viewer</h1>
+  <div class="separator"></div>
+  <div id="toolbar">
+    <button class="tool-btn" id="btn-wireframe">Wireframe</button>
+    <button class="tool-btn" id="btn-edges">Edges</button>
+    <button class="tool-btn" id="btn-transparent">X-Ray</button>
+    <button class="tool-btn" id="btn-reset-camera">Fit View</button>
+    <div class="separator"></div>
+    <button class="tool-btn" id="btn-new-file">Load New File</button>
+    <button class="tool-btn" id="btn-sensor">Upload Sensor Data</button>
+  </div>
+</div>
+
+<!-- Upload zone -->
+<div id="upload-zone">
+  <div id="drop-area">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+    </svg>
+    <h2>Upload IFC Model</h2>
+    <p>Drag & drop your .ifc file here, or click to browse</p>
+    <button class="btn" id="btn-browse">Choose File</button>
+    <input type="file" id="file-input" accept=".ifc">
+  </div>
+</div>
+<input type="file" id="sensor-file-input" accept=".json">
+
+<!-- 3D Viewer -->
+<div id="viewer-container">
+  <canvas id="three-canvas"></canvas>
+</div>
+
+<!-- Loading -->
+<div id="loading-overlay">
+  <div class="spinner"></div>
+  <div id="loading-text">Loading IFC model...</div>
+  <div id="loading-progress"><div id="loading-bar"></div></div>
+</div>
+
+<!-- Info panel -->
+<div id="info-panel">
+  <div class="title" id="info-title">Model Info</div>
+  <div class="row"><span class="label">File</span><span class="value" id="info-filename">-</span></div>
+  <div class="row"><span class="label">Size</span><span class="value" id="info-filesize">-</span></div>
+  <div class="row"><span class="label">Meshes</span><span class="value" id="info-meshes">-</span></div>
+  <div class="row"><span class="label">Triangles</span><span class="value" id="info-triangles">-</span></div>
+  <div class="row"><span class="label">Load time</span><span class="value" id="info-time">-</span></div>
+</div>
+
+<!-- Controls hint -->
+<div id="controls-hint">
+  <kbd>Left drag</kbd> Rotate<br>
+  <kbd>Right drag</kbd> Pan<br>
+  <kbd>Scroll</kbd> Zoom<br>
+  <kbd>F</kbd> Fit view<br>
+  <kbd>W</kbd> Wireframe<br>
+  <kbd>E</kbd> Edges<br>
+  <kbd>X</kbd> X-Ray
+</div>
+
+<!-- Hover tooltip -->
+<div id="tooltip"></div>
+
+<!-- Sensor legend panel -->
+<div id="temp-legend">
+  <div class="legend-type-buttons">
+    <button class="legend-type-btn active-type" data-type="temperature">Temp</button>
+    <button class="legend-type-btn" data-type="humidity">Humidity</button>
+    <button class="legend-type-btn" data-type="co2">CO&sub2;</button>
+  </div>
+  <div class="legend-title" id="legend-title">Temperature (&deg;C)</div>
+  <div class="legend-row">
+    <div class="legend-bar" id="legend-bar"></div>
+    <div class="legend-labels" id="legend-labels">
+      <span>&ge; 28</span>
+      <span>26</span>
+      <span>24</span>
+      <span>22</span>
+      <span>20</span>
+      <span>&le; 18</span>
+    </div>
+  </div>
+  <div class="legend-stats" id="legend-stats"></div>
+  <button class="legend-toggle" id="btn-heatmap-toggle">Heatmap ON</button>
+</div>
+
+<!-- Three.js + OrbitControls + web-ifc from CDN -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.175.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.175.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { EdgesGeometry, LineSegments, LineBasicMaterial } from 'three';
+
+// ============================================================
+// web-ifc loader (loaded dynamically from CDN)
+// ============================================================
+const WEB_IFC_VERSION = '0.0.74';
+const WEB_IFC_CDN = `https://cdn.jsdelivr.net/npm/web-ifc@${WEB_IFC_VERSION}/`;
+
+let WebIFC;
+
+async function loadWebIFC() {
+  const module = await import(`https://cdn.jsdelivr.net/npm/web-ifc@${WEB_IFC_VERSION}/web-ifc-api.js`);
+  WebIFC = module;
+  return WebIFC;
+}
+
+// ============================================================
+// DOM references
+// ============================================================
+const uploadZone     = document.getElementById('upload-zone');
+const dropArea       = document.getElementById('drop-area');
+const fileInput      = document.getElementById('file-input');
+const btnBrowse      = document.getElementById('btn-browse');
+const viewerContainer= document.getElementById('viewer-container');
+const canvas         = document.getElementById('three-canvas');
+const loadingOverlay = document.getElementById('loading-overlay');
+const loadingText    = document.getElementById('loading-text');
+const loadingBar     = document.getElementById('loading-bar');
+const infoPanel      = document.getElementById('info-panel');
+const controlsHint   = document.getElementById('controls-hint');
+const toolbar        = document.getElementById('toolbar');
+
+// Toolbar buttons
+const btnWireframe   = document.getElementById('btn-wireframe');
+const btnEdges       = document.getElementById('btn-edges');
+const btnTransparent = document.getElementById('btn-transparent');
+const btnResetCamera = document.getElementById('btn-reset-camera');
+const btnNewFile     = document.getElementById('btn-new-file');
+const btnSensor      = document.getElementById('btn-sensor');
+const sensorFileInput= document.getElementById('sensor-file-input');
+const tempLegend     = document.getElementById('temp-legend');
+const tooltipEl      = document.getElementById('tooltip');
+const btnHeatmapToggle = document.getElementById('btn-heatmap-toggle');
+const legendTitle    = document.getElementById('legend-title');
+const legendBar      = document.getElementById('legend-bar');
+const legendLabels   = document.getElementById('legend-labels');
+const typeBtns       = document.querySelectorAll('.legend-type-btn');
+
+// ============================================================
+// Three.js scene setup
+// ============================================================
+const scene    = new THREE.Scene();
+scene.background = new THREE.Color(0x1a1d23);
+
+const camera   = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 10000);
+camera.position.set(30, 30, 30);
+
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setSize(window.innerWidth, window.innerHeight - 52);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.0;
+
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.screenSpacePanning = true;
+controls.minDistance = 0.5;
+controls.maxDistance = 5000;
+
+// Lights
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+scene.add(ambientLight);
+
+const dirLight1 = new THREE.DirectionalLight(0xffffff, 1.2);
+dirLight1.position.set(50, 80, 50);
+dirLight1.castShadow = true;
+scene.add(dirLight1);
+
+const dirLight2 = new THREE.DirectionalLight(0xccddff, 0.4);
+dirLight2.position.set(-30, 40, -20);
+scene.add(dirLight2);
+
+const hemiLight = new THREE.HemisphereLight(0xddeeff, 0x0d0d0d, 0.3);
+scene.add(hemiLight);
+
+// Grid
+const grid = new THREE.GridHelper(200, 100, 0x2a2d35, 0x1e2028);
+grid.material.opacity = 0.6;
+grid.material.transparent = true;
+scene.add(grid);
+
+// Axes
+const axes = new THREE.AxesHelper(5);
+scene.add(axes);
+
+// ============================================================
+// State
+// ============================================================
+const modelGroup = new THREE.Group();
+modelGroup.name = 'IFC_Model';
+scene.add(modelGroup);
+
+const edgesGroup = new THREE.Group();
+edgesGroup.name = 'Edges';
+edgesGroup.visible = false;
+scene.add(edgesGroup);
+
+let wireframeMode = false;
+let edgesMode = false;
+let xrayMode = false;
+let meshCount = 0;
+let triangleCount = 0;
+
+// Sensor heatmap state
+let spaceMap = {};           // expressID → globalId (from IFC IfcSpace)
+let elementToSpaceMap = {};  // expressID → globalId (spatial matching)
+let sensorMaps = {           // globalId → { value, name, sensorCount } per type
+  temperature: {},
+  humidity: {},
+  co2: {}
+};
+let activeSensorType = null; // 'temperature' | 'humidity' | 'co2' | null
+let sensorDataLoaded = false;
+let ifcModelLoaded = false;
+let heatmapActive = false;
+
+// ============================================================
+// Animation loop
+// ============================================================
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+  renderer.render(scene, camera);
+}
+animate();
+
+// ============================================================
+// Resize handler
+// ============================================================
+window.addEventListener('resize', () => {
+  const w = window.innerWidth;
+  const h = window.innerHeight - 52;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+});
+
+// ============================================================
+// File handling
+// ============================================================
+btnBrowse.addEventListener('click', (e) => {
+  e.stopPropagation(); // prevent bubbling to dropArea
+  fileInput.click();
+});
+
+dropArea.addEventListener('click', (e) => {
+  // Only trigger if user clicked the drop area itself, not the button
+  if (e.target === btnBrowse || btnBrowse.contains(e.target)) return;
+  fileInput.click();
+});
+
+dropArea.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  dropArea.classList.add('dragover');
+});
+
+dropArea.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropArea.classList.remove('dragover');
+});
+
+dropArea.addEventListener('drop', (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  dropArea.classList.remove('dragover');
+  const files = e.dataTransfer.files;
+  if (files.length > 0 && files[0].name.toLowerCase().endsWith('.ifc')) {
+    handleFile(files[0]);
+  }
+});
+
+fileInput.addEventListener('change', () => {
+  if (fileInput.files.length > 0) {
+    handleFile(fileInput.files[0]);
+  }
+});
+
+btnNewFile.addEventListener('click', () => {
+  clearModel();
+  uploadZone.classList.remove('hidden');
+  viewerContainer.classList.remove('active');
+  infoPanel.classList.remove('active');
+  controlsHint.classList.remove('active');
+  toolbar.classList.remove('active');
+  tempLegend.classList.remove('active');
+  fileInput.value = '';
+  sensorFileInput.value = '';
+  ifcModelLoaded = false;
+  sensorDataLoaded = false;
+  heatmapActive = false;
+  activeSensorType = null;
+  spaceMap = {};
+  elementToSpaceMap = {};
+  sensorMaps = { temperature: {}, humidity: {}, co2: {} };
+});
+
+// ============================================================
+// Load and parse IFC
+// ============================================================
+async function handleFile(file) {
+  const startTime = performance.now();
+  const fileSize = file.size;
+  const fileName = file.name;
+
+  // Show loading
+  uploadZone.classList.add('hidden');
+  viewerContainer.classList.add('active');
+  loadingOverlay.classList.add('active');
+  loadingText.textContent = 'Initializing web-ifc engine...';
+  loadingBar.style.width = '5%';
+
+  try {
+    // Load web-ifc
+    if (!WebIFC) {
+      await loadWebIFC();
+    }
+
+    loadingText.textContent = 'Initializing WASM...';
+    loadingBar.style.width = '10%';
+
+    const ifcAPI = new WebIFC.IfcAPI();
+    ifcAPI.SetWasmPath(WEB_IFC_CDN, true);
+    await ifcAPI.Init();
+
+    loadingText.textContent = 'Reading IFC file...';
+    loadingBar.style.width = '20%';
+
+    // Read file
+    const arrayBuffer = await file.arrayBuffer();
+    const data = new Uint8Array(arrayBuffer);
+
+    loadingText.textContent = 'Parsing IFC structure...';
+    loadingBar.style.width = '30%';
+
+    const modelID = ifcAPI.OpenModel(data, {
+      COORDINATE_TO_ORIGIN: true,
+    });
+
+    loadingText.textContent = 'Extracting IfcSpace data...';
+    loadingBar.style.width = '35%';
+
+    // Extract IfcSpace expressIDs → GlobalIds for sensor mapping
+    const IFCSPACE = 3856911033;
+    spaceMap = {};
+    try {
+      const spaceIDs = ifcAPI.GetLineIDsWithType(modelID, IFCSPACE);
+      const count = typeof spaceIDs.size === 'function' ? spaceIDs.size() : spaceIDs.length;
+      for (let i = 0; i < count; i++) {
+        const eid = typeof spaceIDs.get === 'function' ? spaceIDs.get(i) : spaceIDs[i];
+        try {
+          const props = ifcAPI.GetLine(modelID, eid);
+          const gid = props.GlobalId?.value ?? props.GlobalId;
+          if (gid) spaceMap[eid] = gid;
+        } catch(e) {}
+      }
+      console.log(`Extracted ${Object.keys(spaceMap).length} IfcSpace GlobalIds`);
+    } catch(e) {
+      console.warn('Could not extract IfcSpace data:', e);
+    }
+
+    // Extract IfcRelSpaceBoundary to map walls/elements → spaces
+    const IFCRELSPACEBOUNDARY = 3451746338;
+    elementToSpaceMap = {};
+    try {
+      const relIds = ifcAPI.GetLineIDsWithType(modelID, IFCRELSPACEBOUNDARY);
+      const relCount = typeof relIds.size === 'function' ? relIds.size() : (relIds.length || 0);
+      for (let i = 0; i < relCount; i++) {
+        const rid = typeof relIds.get === 'function' ? relIds.get(i) : relIds[i];
+        try {
+          const rel = ifcAPI.GetLine(modelID, rid);
+          let spaceEid = rel.RelatingSpace?.value ?? rel.RelatingSpace;
+          if (typeof spaceEid === 'object' && spaceEid !== null) spaceEid = spaceEid.value ?? spaceEid.expressID;
+          let elemEid = rel.RelatedBuildingElement?.value ?? rel.RelatedBuildingElement;
+          if (typeof elemEid === 'object' && elemEid !== null) elemEid = elemEid.value ?? elemEid.expressID;
+          if (spaceEid && elemEid && spaceMap[spaceEid]) {
+            elementToSpaceMap[elemEid] = spaceMap[spaceEid];
+          }
+        } catch(e) {}
+      }
+      console.log(`Extracted ${Object.keys(elementToSpaceMap).length} element→space boundaries`);
+    } catch(e) {
+      console.warn('IfcRelSpaceBoundary not available:', e);
+    }
+
+    loadingText.textContent = 'Generating 3D geometry...';
+    loadingBar.style.width = '40%';
+
+    // Clear previous model
+    clearModel();
+
+    // Stream all meshes — single pass
+    meshCount = 0;
+    triangleCount = 0;
+    let processedMeshes = 0;
+
+    ifcAPI.StreamAllMeshes(modelID, (flatMesh, index, total) => {
+      const placedGeometries = flatMesh.geometries;
+      const numGeoms = placedGeometries.size();
+
+      for (let i = 0; i < numGeoms; i++) {
+        const placedGeometry = placedGeometries.get(i);
+        const ifcGeometry = ifcAPI.GetGeometry(modelID, placedGeometry.geometryExpressID);
+
+        const vertexDataPtr = ifcGeometry.GetVertexData();
+        const vertexDataSize = ifcGeometry.GetVertexDataSize();
+        const indexDataPtr = ifcGeometry.GetIndexData();
+        const indexDataSize = ifcGeometry.GetIndexDataSize();
+
+        // Extract arrays — try IfcAPI methods first, fall back to direct heap
+        let verts, indices;
+        if (typeof ifcAPI.GetVertexArray === 'function') {
+          verts = ifcAPI.GetVertexArray(vertexDataPtr, vertexDataSize);
+          indices = ifcAPI.GetIndexArray(indexDataPtr, indexDataSize);
+        } else {
+          // Direct WASM heap access
+          const wasm = ifcAPI.wasmModule;
+          const heapF32 = wasm.HEAPF32;
+          const heapU32 = wasm.HEAPU32;
+          const vStart = vertexDataPtr / 4;
+          const iStart = indexDataPtr / 4;
+          verts = heapF32.slice(vStart, vStart + vertexDataSize);
+          indices = heapU32.slice(iStart, iStart + indexDataSize);
+        }
+
+        if (verts.length === 0 || indices.length === 0) {
+          try { ifcGeometry.delete(); } catch(e) {}
+          continue;
+        }
+
+        // Build Three.js geometry
+        const geometry = new THREE.BufferGeometry();
+
+        // web-ifc returns interleaved: [x,y,z, nx,ny,nz] per vertex
+        const vertCount = verts.length / 6;
+        const posFloats = new Float32Array(vertCount * 3);
+        const normFloats = new Float32Array(vertCount * 3);
+
+        for (let j = 0; j < vertCount; j++) {
+          const src = j * 6;
+          const dst = j * 3;
+          posFloats[dst]     = verts[src];
+          posFloats[dst + 1] = verts[src + 1];
+          posFloats[dst + 2] = verts[src + 2];
+          normFloats[dst]     = verts[src + 3];
+          normFloats[dst + 1] = verts[src + 4];
+          normFloats[dst + 2] = verts[src + 5];
+        }
+
+        geometry.setAttribute('position', new THREE.BufferAttribute(posFloats, 3));
+        geometry.setAttribute('normal', new THREE.BufferAttribute(normFloats, 3));
+        geometry.setIndex(new THREE.BufferAttribute(indices, 1));
+
+        // Material from IFC color
+        const color = placedGeometry.color;
+        const material = new THREE.MeshPhongMaterial({
+          color: new THREE.Color(color.x, color.y, color.z),
+          opacity: color.w,
+          transparent: color.w < 1.0,
+          side: THREE.DoubleSide,
+          depthWrite: color.w >= 1.0,
+        });
+
+        const mesh = new THREE.Mesh(geometry, material);
+
+        // Apply transformation matrix
+        const matrix = new THREE.Matrix4();
+        matrix.fromArray(placedGeometry.flatTransformation);
+        mesh.applyMatrix4(matrix);
+
+        mesh.userData.expressID = flatMesh.expressID;
+        modelGroup.add(mesh);
+
+        // Edge lines (skip for small geometries to save memory)
+        if (indices.length > 6) {
+          const edgeGeo = new THREE.EdgesGeometry(geometry, 30);
+          const edgeMat = new THREE.LineBasicMaterial({ color: 0x333333, opacity: 0.4, transparent: true });
+          const edgeLine = new THREE.LineSegments(edgeGeo, edgeMat);
+          edgeLine.applyMatrix4(matrix);
+          edgesGroup.add(edgeLine);
+        }
+
+        meshCount++;
+        triangleCount += indices.length / 3;
+
+        try { ifcGeometry.delete(); } catch(e) {}
+      }
+
+      processedMeshes++;
+      if (total > 0) {
+        const pct = 40 + (processedMeshes / total) * 55;
+        loadingBar.style.width = pct + '%';
+      }
+
+      if (processedMeshes % 200 === 0) {
+        loadingText.textContent = `Building meshes... ${processedMeshes}/${total}`;
+      }
+    });
+
+    // ============================================================
+    // Spatial mapping: compute IfcSpace bounding boxes, match walls to rooms
+    // ============================================================
+    loadingText.textContent = 'Building spatial mapping...';
+    loadingBar.style.width = '96%';
+
+    // Step 1: Get IfcSpace bounding boxes using GetFlatMesh
+    const spaceBounds = {}; // globalId → {minX, maxX, minZ, maxZ}
+    for (const [eidStr, gid] of Object.entries(spaceMap)) {
+      try {
+        const spFlatMesh = ifcAPI.GetFlatMesh(modelID, Number(eidStr));
+        const numG = spFlatMesh.geometries.size();
+        let sMinX = Infinity, sMaxX = -Infinity;
+        let sMinZ = Infinity, sMaxZ = -Infinity;
+
+        for (let gi = 0; gi < numG; gi++) {
+          const pg = spFlatMesh.geometries.get(gi);
+          const spGeom = ifcAPI.GetGeometry(modelID, pg.geometryExpressID);
+          const vPtr = spGeom.GetVertexData();
+          const vSz = spGeom.GetVertexDataSize();
+
+          let sv;
+          if (typeof ifcAPI.GetVertexArray === 'function') {
+            sv = ifcAPI.GetVertexArray(vPtr, vSz);
+          } else {
+            const w = ifcAPI.wasmModule;
+            sv = w.HEAPF32.slice(vPtr / 4, vPtr / 4 + vSz);
+          }
+
+          const mat = new THREE.Matrix4();
+          mat.fromArray(pg.flatTransformation);
+
+          const vc = sv.length / 6;
+          for (let vi = 0; vi < vc; vi++) {
+            const pt = new THREE.Vector3(sv[vi * 6], sv[vi * 6 + 1], sv[vi * 6 + 2]);
+            pt.applyMatrix4(mat);
+            sMinX = Math.min(sMinX, pt.x); sMaxX = Math.max(sMaxX, pt.x);
+            sMinZ = Math.min(sMinZ, pt.z); sMaxZ = Math.max(sMaxZ, pt.z);
+          }
+
+          try { spGeom.delete(); } catch(e) {}
+        }
+
+        if (sMinX < Infinity) {
+          spaceBounds[gid] = { minX: sMinX, maxX: sMaxX, minZ: sMinZ, maxZ: sMaxZ };
+        }
+        try { spFlatMesh.delete(); } catch(e) {}
+      } catch(e) {}
+    }
+
+    console.log(`IfcSpace bounding boxes computed: ${Object.keys(spaceBounds).length} / ${Object.keys(spaceMap).length}`);
+
+    // Step 2: Match wall/element meshes to spaces by XZ containment
+    modelGroup.updateMatrixWorld(true);
+    let spatialMatches = 0;
+
+    modelGroup.traverse(child => {
+      if (!child.isMesh) return;
+      const eid = child.userData.expressID;
+      if (spaceMap[eid]) return;               // Already an IfcSpace
+      if (elementToSpaceMap[eid]) return;       // Already mapped
+
+      child.geometry.computeBoundingBox();
+      const localBox = child.geometry.boundingBox;
+      if (!localBox) return;
+      const worldBox = localBox.clone().applyMatrix4(child.matrixWorld);
+      const cx = (worldBox.min.x + worldBox.max.x) / 2;
+      const cz = (worldBox.min.z + worldBox.max.z) / 2;
+
+      // Find smallest containing space in XZ (with 0.5m tolerance)
+      let bestGid = null;
+      let bestArea = Infinity;
+
+      for (const [gid, sb] of Object.entries(spaceBounds)) {
+        if (cx >= sb.minX - 0.5 && cx <= sb.maxX + 0.5 &&
+            cz >= sb.minZ - 0.5 && cz <= sb.maxZ + 0.5) {
+          const area = (sb.maxX - sb.minX) * (sb.maxZ - sb.minZ);
+          if (area < bestArea) {
+            bestArea = area;
+            bestGid = gid;
+          }
+        }
+      }
+
+      if (bestGid) {
+        elementToSpaceMap[eid] = bestGid;
+        spatialMatches++;
+      }
+    });
+
+    console.log(`Spatial matching: ${spatialMatches} elements assigned to rooms`);
+
+    // Cleanup
+    ifcAPI.CloseModel(modelID);
+    ifcModelLoaded = true;
+
+    // Auto-apply sensor colors if sensor data was loaded before IFC
+    if (sensorDataLoaded) applySensorColors();
+
+    loadingBar.style.width = '98%';
+    loadingText.textContent = 'Finalizing...';
+
+    // Fit camera to model
+    fitCameraToModel();
+
+    const endTime = performance.now();
+    const elapsed = ((endTime - startTime) / 1000).toFixed(1);
+
+    // Update info panel
+    document.getElementById('info-filename').textContent = fileName;
+    document.getElementById('info-filesize').textContent = formatBytes(fileSize);
+    document.getElementById('info-meshes').textContent = meshCount.toLocaleString();
+    document.getElementById('info-triangles').textContent = triangleCount.toLocaleString();
+    document.getElementById('info-time').textContent = elapsed + 's';
+
+    // Show UI
+    loadingBar.style.width = '100%';
+    setTimeout(() => {
+      loadingOverlay.classList.remove('active');
+      infoPanel.classList.add('active');
+      controlsHint.classList.add('active');
+      toolbar.classList.add('active');
+    }, 300);
+
+  } catch (err) {
+    console.error('IFC loading error:', err);
+    loadingText.textContent = 'Error: ' + err.message;
+    loadingBar.style.width = '0%';
+    setTimeout(() => {
+      loadingOverlay.classList.remove('active');
+      uploadZone.classList.remove('hidden');
+      viewerContainer.classList.remove('active');
+      alert('Failed to load IFC file:\n' + err.message);
+    }, 2000);
+  }
+}
+
+// ============================================================
+// Utilities
+// ============================================================
+function clearModel() {
+  while (modelGroup.children.length > 0) {
+    const child = modelGroup.children[0];
+    if (child.geometry) child.geometry.dispose();
+    if (child.material) {
+      if (Array.isArray(child.material)) child.material.forEach(m => m.dispose());
+      else child.material.dispose();
+    }
+    modelGroup.remove(child);
+  }
+  while (edgesGroup.children.length > 0) {
+    const child = edgesGroup.children[0];
+    if (child.geometry) child.geometry.dispose();
+    if (child.material) child.material.dispose();
+    edgesGroup.remove(child);
+  }
+  meshCount = 0;
+  triangleCount = 0;
+}
+
+function fitCameraToModel() {
+  const box = new THREE.Box3().setFromObject(modelGroup);
+  if (box.isEmpty()) return;
+
+  const center = box.getCenter(new THREE.Vector3());
+  const size = box.getSize(new THREE.Vector3());
+  const maxDim = Math.max(size.x, size.y, size.z);
+  const distance = maxDim * 1.5;
+
+  camera.position.set(
+    center.x + distance * 0.6,
+    center.y + distance * 0.5,
+    center.z + distance * 0.6
+  );
+  camera.lookAt(center);
+  camera.near = maxDim * 0.001;
+  camera.far = maxDim * 100;
+  camera.updateProjectionMatrix();
+
+  controls.target.copy(center);
+  controls.update();
+
+  // Update grid
+  grid.position.y = box.min.y - 0.01;
+  const gridSize = maxDim * 3;
+  grid.scale.set(gridSize / 200, 1, gridSize / 200);
+}
+
+function formatBytes(bytes) {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+}
+
+// ============================================================
+// Toolbar actions
+// ============================================================
+btnWireframe.addEventListener('click', () => {
+  wireframeMode = !wireframeMode;
+  btnWireframe.classList.toggle('active-btn', wireframeMode);
+  modelGroup.traverse(child => {
+    if (child.isMesh && child.material) {
+      child.material.wireframe = wireframeMode;
+    }
+  });
+});
+
+btnEdges.addEventListener('click', () => {
+  edgesMode = !edgesMode;
+  btnEdges.classList.toggle('active-btn', edgesMode);
+  edgesGroup.visible = edgesMode;
+});
+
+btnTransparent.addEventListener('click', () => {
+  xrayMode = !xrayMode;
+  btnTransparent.classList.toggle('active-btn', xrayMode);
+  modelGroup.traverse(child => {
+    if (child.isMesh && child.material) {
+      if (xrayMode) {
+        child.material._origOpacity = child.material.opacity;
+        child.material._origTransparent = child.material.transparent;
+        child.material.opacity = 0.15;
+        child.material.transparent = true;
+        child.material.depthWrite = false;
+      } else {
+        child.material.opacity = child.material._origOpacity ?? 1;
+        child.material.transparent = child.material._origTransparent ?? false;
+        child.material.depthWrite = !child.material.transparent;
+      }
+      child.material.needsUpdate = true;
+    }
+  });
+});
+
+btnResetCamera.addEventListener('click', fitCameraToModel);
+
+// ============================================================
+// Keyboard shortcuts
+// ============================================================
+window.addEventListener('keydown', (e) => {
+  if (e.target.tagName === 'INPUT') return;
+  switch (e.key.toLowerCase()) {
+    case 'w': btnWireframe.click(); break;
+    case 'e': btnEdges.click(); break;
+    case 'x': btnTransparent.click(); break;
+    case 'f': btnResetCamera.click(); break;
+  }
+});
+
+// ============================================================
+// Sensor data upload & heatmap coloring
+// ============================================================
+btnSensor.addEventListener('click', () => {
+  sensorFileInput.click();
+});
+
+sensorFileInput.addEventListener('change', () => {
+  if (sensorFileInput.files.length > 0) {
+    handleSensorFile(sensorFileInput.files[0]);
+  }
+});
+
+// Heatmap ON/OFF toggle on the legend panel
+btnHeatmapToggle.addEventListener('click', () => {
+  if (!sensorDataLoaded || !ifcModelLoaded) return;
+  heatmapActive = !heatmapActive;
+  if (heatmapActive) {
+    applySensorColors();
+    btnHeatmapToggle.textContent = 'Heatmap ON';
+    btnHeatmapToggle.classList.remove('off');
+  } else {
+    removeSensorColors();
+    btnHeatmapToggle.textContent = 'Heatmap OFF';
+    btnHeatmapToggle.classList.add('off');
+  }
+});
+
+async function handleSensorFile(file) {
+  try {
+    const text = await file.text();
+    const data = JSON.parse(text);
+
+    // Build maps for all 3 sensor types
+    sensorMaps = { temperature: {}, humidity: {}, co2: {} };
+    const types = ['temperature', 'humidity', 'co2'];
+
+    for (const sType of types) {
+      const sensors = data.filter(r =>
+        r.eb_type === sType &&
+        r.spaceRef && r.spaceRef !== 'm:' &&
+        r.curVal !== undefined && r.curVal !== null
+      );
+
+      const grouped = {};
+      for (const s of sensors) {
+        const gid = s.spaceRef.replace('r:', '');
+        let val = s.curVal;
+        // Normalize humidity: platform_of_trust reports 0.0–1.0 ratio → convert to %
+        if (sType === 'humidity' && val > 0 && val < 1.0) val = val * 100;
+
+        if (!grouped[gid]) {
+          grouped[gid] = { sum: 0, count: 0, name: s.dis_space || s.dis };
+        }
+        grouped[gid].sum += val;
+        grouped[gid].count++;
+      }
+
+      for (const [gid, info] of Object.entries(grouped)) {
+        sensorMaps[sType][gid] = {
+          value: info.sum / info.count,
+          name: info.name,
+          sensorCount: info.count
+        };
+      }
+    }
+
+    console.log(`Parsed sensors — temp: ${Object.keys(sensorMaps.temperature).length} spaces, humidity: ${Object.keys(sensorMaps.humidity).length}, co2: ${Object.keys(sensorMaps.co2).length}`);
+
+    sensorDataLoaded = true;
+    activeSensorType = 'temperature';
+    heatmapActive = true;
+    btnHeatmapToggle.textContent = 'Heatmap ON';
+    btnHeatmapToggle.classList.remove('off');
+    updateLegendForType('temperature');
+
+    if (ifcModelLoaded) {
+      applySensorColors();
+    }
+
+    tempLegend.classList.add('active');
+
+  } catch (err) {
+    console.error('Sensor file error:', err);
+    alert('Error loading sensor file:\n' + err.message);
+  }
+}
+
+// ============================================================
+// Sensor type configurations
+// ============================================================
+const SENSOR_CONFIG = {
+  temperature: {
+    title: 'Temperature (\u00B0C)',
+    unit: '\u00B0C',
+    gradient: 'linear-gradient(to bottom, #ff0000, #ff8c00, #ffcc00, #00cc00, #00cccc, #0066ff)',
+    labels: ['\u2265 28', '26', '24', '22', '20', '\u2264 18'],
+    stops: [
+      { t: 18, r: 0.0, g: 0.4, b: 1.0 },
+      { t: 20, r: 0.0, g: 0.8, b: 0.8 },
+      { t: 22, r: 0.0, g: 0.8, b: 0.0 },
+      { t: 24, r: 1.0, g: 0.8, b: 0.0 },
+      { t: 26, r: 1.0, g: 0.55, b: 0.0 },
+      { t: 28, r: 1.0, g: 0.0, b: 0.0 },
+    ]
+  },
+  humidity: {
+    title: 'Humidity (%RH)',
+    unit: '%',
+    gradient: 'linear-gradient(to bottom, #0044cc, #0088ff, #00cccc, #44dd44, #ffcc00, #ff8800)',
+    labels: ['\u2265 60', '50', '45', '40', '30', '\u2264 20'],
+    stops: [
+      { t: 20, r: 1.0, g: 0.53, b: 0.0 },
+      { t: 30, r: 1.0, g: 0.8, b: 0.0 },
+      { t: 40, r: 0.27, g: 0.87, b: 0.27 },
+      { t: 45, r: 0.0, g: 0.8, b: 0.8 },
+      { t: 50, r: 0.0, g: 0.53, b: 1.0 },
+      { t: 60, r: 0.0, g: 0.27, b: 0.8 },
+    ]
+  },
+  co2: {
+    title: 'CO\u2082 (ppm)',
+    unit: 'ppm',
+    gradient: 'linear-gradient(to bottom, #990000, #ff0000, #ff8c00, #ffcc00, #88cc44, #00aa44)',
+    labels: ['\u2265 1500', '1200', '1000', '800', '600', '\u2264 400'],
+    stops: [
+      { t: 400,  r: 0.0, g: 0.67, b: 0.27 },
+      { t: 600,  r: 0.53, g: 0.8, b: 0.27 },
+      { t: 800,  r: 1.0, g: 0.8, b: 0.0 },
+      { t: 1000, r: 1.0, g: 0.55, b: 0.0 },
+      { t: 1200, r: 1.0, g: 0.0, b: 0.0 },
+      { t: 1500, r: 0.6, g: 0.0, b: 0.0 },
+    ]
+  }
+};
+
+// ============================================================
+// Update legend panel for selected sensor type
+// ============================================================
+function updateLegendForType(sType) {
+  const config = SENSOR_CONFIG[sType];
+  const map = sensorMaps[sType];
+
+  // Update title, gradient, labels
+  legendTitle.textContent = config.title;
+  legendBar.style.background = config.gradient;
+  legendLabels.innerHTML = config.labels.map(l => `<span>${l}</span>`).join('');
+
+  // Update type buttons
+  typeBtns.forEach(btn => {
+    btn.classList.toggle('active-type', btn.dataset.type === sType);
+  });
+
+  // Update stats
+  const vals = Object.values(map).map(v => v.value);
+  if (vals.length === 0) {
+    document.getElementById('legend-stats').innerHTML =
+      `<span style="color:#ff6b6b">No located ${sType} sensors</span>`;
+    return;
+  }
+  const min = Math.min(...vals).toFixed(1);
+  const max = Math.max(...vals).toFixed(1);
+  const avg = (vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(1);
+
+  const spaceGids = new Set(Object.values(spaceMap));
+  let matched = 0;
+  for (const gid of Object.keys(map)) {
+    if (spaceGids.has(gid)) matched++;
+  }
+  let elColored = 0;
+  for (const gid of Object.values(elementToSpaceMap)) {
+    if (map[gid]) elColored++;
+  }
+
+  document.getElementById('legend-stats').innerHTML =
+    `Spaces: <span class="val">${matched}</span>` +
+    `${elColored ? ` &middot; Elements: <span class="val">${elColored}</span>` : ''}<br>` +
+    `Min: <span class="val">${min} ${config.unit}</span><br>` +
+    `Avg: <span class="val">${avg} ${config.unit}</span><br>` +
+    `Max: <span class="val">${max} ${config.unit}</span>`;
+}
+
+// ============================================================
+// Value → Color (generic, uses config stops)
+// ============================================================
+function valueToColor(val, sType) {
+  const stops = SENSOR_CONFIG[sType].stops;
+
+  if (val <= stops[0].t)
+    return new THREE.Color(stops[0].r, stops[0].g, stops[0].b);
+  if (val >= stops[stops.length - 1].t)
+    return new THREE.Color(stops[stops.length - 1].r, stops[stops.length - 1].g, stops[stops.length - 1].b);
+
+  for (let i = 0; i < stops.length - 1; i++) {
+    if (val >= stops[i].t && val < stops[i + 1].t) {
+      const frac = (val - stops[i].t) / (stops[i + 1].t - stops[i].t);
+      return new THREE.Color(
+        stops[i].r + frac * (stops[i + 1].r - stops[i].r),
+        stops[i].g + frac * (stops[i + 1].g - stops[i].g),
+        stops[i].b + frac * (stops[i + 1].b - stops[i].b)
+      );
+    }
+  }
+  return new THREE.Color(1, 0, 0);
+}
+
+// ============================================================
+// Apply sensor colors to IFC model
+// ============================================================
+function applySensorColors() {
+  if (!activeSensorType) return;
+  const currentMap = sensorMaps[activeSensorType];
+  let coloredSpaces = 0;
+  let coloredElements = 0;
+  let faded = 0;
+
+  modelGroup.traverse(child => {
+    if (!child.isMesh) return;
+
+    if (!child.userData._origMaterial) {
+      child.userData._origMaterial = child.material;
+    }
+
+    const eid = child.userData.expressID;
+    let gid = spaceMap[eid];
+    let isSpace = !!gid;
+    if (!gid) gid = elementToSpaceMap[eid];
+
+    if (gid && currentMap[gid]) {
+      const { value, name } = currentMap[gid];
+      const color = valueToColor(value, activeSensorType);
+
+      child.material = new THREE.MeshPhongMaterial({
+        color: color,
+        opacity: isSpace ? 0.92 : 0.75,
+        transparent: true,
+        side: THREE.DoubleSide,
+        depthWrite: true,
+        emissive: color.clone().multiplyScalar(0.2),
+      });
+      child.renderOrder = isSpace ? 2 : 1;
+
+      child.userData.sensorTemp = value;
+      child.userData.spaceName = name;
+      child.userData.globalId = gid;
+      if (isSpace) coloredSpaces++; else coloredElements++;
+    } else {
+      child.material = new THREE.MeshPhongMaterial({
+        color: 0x667788,
+        opacity: 0.08,
+        transparent: true,
+        side: THREE.DoubleSide,
+        depthWrite: false,
+      });
+      child.renderOrder = 0;
+      faded++;
+    }
+  });
+
+  console.log(`Heatmap [${activeSensorType}]: ${coloredSpaces} spaces, ${coloredElements} elements, ${faded} faded`);
+}
+
+// ============================================================
+// Remove sensor colors (restore original materials)
+// ============================================================
+function removeSensorColors() {
+  modelGroup.traverse(child => {
+    if (!child.isMesh) return;
+    if (child.userData._origMaterial) {
+      if (child.material !== child.userData._origMaterial) {
+        child.material.dispose();
+      }
+      child.material = child.userData._origMaterial;
+      child.renderOrder = 0;
+    }
+    delete child.userData.sensorTemp;
+    delete child.userData.spaceName;
+    delete child.userData.globalId;
+  });
+}
+
+// ============================================================
+// Type selector button handlers
+// ============================================================
+typeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (!sensorDataLoaded || !ifcModelLoaded) return;
+    const newType = btn.dataset.type;
+    if (newType === activeSensorType && heatmapActive) return; // already active
+
+    activeSensorType = newType;
+    heatmapActive = true;
+    btnHeatmapToggle.textContent = 'Heatmap ON';
+    btnHeatmapToggle.classList.remove('off');
+    updateLegendForType(newType);
+    applySensorColors();
+  });
+});
+
+// ============================================================
+// Raycaster tooltip on hover
+// ============================================================
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+
+canvas.addEventListener('mousemove', (e) => {
+  if (!sensorDataLoaded) return;
+
+  const rect = canvas.getBoundingClientRect();
+  mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+  mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+
+  raycaster.setFromCamera(mouse, camera);
+  const intersects = raycaster.intersectObjects(modelGroup.children, false);
+
+  if (intersects.length > 0) {
+    const hit = intersects[0].object;
+    if (hit.userData.sensorTemp !== undefined && activeSensorType) {
+      const val = hit.userData.sensorTemp.toFixed(1);
+      const name = hit.userData.spaceName || 'Unknown';
+      const gid = hit.userData.globalId || '';
+      const config = SENSOR_CONFIG[activeSensorType];
+      const color = valueToColor(hit.userData.sensorTemp, activeSensorType);
+      const hex = '#' + color.getHexString();
+      const typeLabel = activeSensorType === 'co2' ? 'CO\u2082' :
+                        activeSensorType.charAt(0).toUpperCase() + activeSensorType.slice(1);
+      tooltipEl.innerHTML =
+        `<div class="tt-room">${name}</div>` +
+        `<div>${typeLabel}: <span class="tt-temp" style="color:${hex}">${val} ${config.unit}</span></div>` +
+        `<div style="color:#6b7280;font-size:11px">ID: ${gid}</div>`;
+      tooltipEl.style.left = (e.clientX + 16) + 'px';
+      tooltipEl.style.top = (e.clientY + 16) + 'px';
+      tooltipEl.style.display = 'block';
+      return;
+    }
+  }
+  tooltipEl.style.display = 'none';
+});
+
+canvas.addEventListener('mouseleave', () => {
+  tooltipEl.style.display = 'none';
+});
+</script>
+</body>
+</html>

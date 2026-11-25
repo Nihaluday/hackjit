@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OMNIS-X Institutional Digital Twin</title>
+<style>
+:root{--bg:#ffffff;--panel:#12305b;--panel2:#12305b;--blue:#12305b;--cyan:#19d3e5;--green:#20c982;--yellow:#f4b740;--red:#f05252;--text:#111111;--muted:#475569;--border:#31537a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 system-ui,Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}
+#shell{display:flex;min-height:100vh}aside{width:220px;background:#12305b;border-right:1px solid var(--border);padding:16px 12px;position:sticky;top:0;height:100vh}
+.brand{font-size:20px;font-weight:800;color:#f8fafc;letter-spacing:.8px}.brand-sub{color:#cbd5e1;font-size:11px}.login-brand .brand{color:#12305b}.login-brand .brand-sub{color:var(--muted)}.online{color:var(--green);font-size:12px;margin:5px 0 18px}
+nav a{display:block;padding:9px 10px;margin:3px 0;border-radius:8px;color:#f8fafc;cursor:pointer}nav a:hover,nav a.active{background:var(--blue);color:#f8fafc}
+main{flex:1;padding:16px;min-width:0}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.top h2{margin:0}.user{color:var(--muted)}
+.grid{display:grid;gap:12px}.g4{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px;color:#f8fafc}.card h3{margin:0 0 10px;color:#f8fafc;font-size:14px}.metric{font-size:27px;font-weight:800}.card .metric{color:#f8fafc!important}.muted{color:var(--muted)}.card .muted,.portal-card .muted{color:#cbd5e1}
+.pill{display:inline-block;border-radius:99px;padding:2px 8px;font-size:11px}.green{background:#20c98233;color:var(--green)}.yellow{background:#f4b74033;color:var(--yellow)}.red{background:#f0525233;color:var(--red)}
+input,select,textarea{background:#12305b;color:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:8px 10px}button{background:var(--blue);border:0;border-radius:8px;color:#f8fafc;padding:8px 12px}button.secondary{background:#12305b}button.danger{background:var(--red)}button.success{background:var(--green);color:#082318}
+label{display:block;font-size:12px;color:#cbd5e1;margin:8px 0 4px}.flex{display:flex;gap:8px;flex-wrap:wrap;align-items:end}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--border)}th{color:#cbd5e1;font-size:12px}.table-wrap{overflow-x:auto}
+.login{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}.login-box{width:min(420px,100%)}.login-brand{text-align:center;margin-bottom:18px}
+.portal-select{width:min(900px,100%)}.portal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.portal-card{width:100%;min-height:150px;text-align:left;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px;color:#f8fafc}.portal-card h3{margin:0 0 8px;color:#f8fafc}.portal-card:not(:disabled):hover{border-color:var(--blue)}.portal-card:disabled{background:var(--panel2);color:#cbd5e1;opacity:.7;cursor:not-allowed}
+.twin-frame{width:100%;height:650px;border:0;border-radius:10px;background:#0f1117}.problem-row{cursor:pointer}.problem-row:hover{background:#1e4270}.best{border:2px solid var(--green)}
+.notice{border-left:3px solid var(--cyan);padding:8px 10px;background:#12305b}.auth-error{color:#ffb4b4}.auth-success{color:var(--green)}.bar{display:flex;align-items:center;gap:8px;margin:6px}.bar i{height:8px;border-radius:5px;background:var(--blue)}.bar span:first-child{width:150px;color:#cbd5e1}
+@media(max-width:720px){#shell{display:block}aside{position:relative;width:100%;height:auto}nav{display:flex;flex-wrap:wrap}main{padding:10px}.twin-frame{height:500px}.top{align-items:flex-start}}
+</style>
+</head>
+<body><div id="app"></div>
+<script>
+const NAV=[['dash','Dashboard'],['problems','Problem Detection & Resolution'],['sim','Failure Simulation'],['recovery','Recovery & Solution Planning'],['analytics','Analytics & Reports']];
+const $=s=>document.querySelector(s);
+let token='',user=null,role='',page='dash',resources=[],dependencies=[],problems=[],simulations=[],analyticsData=null,recoveryPlans=[],selectedResource=null,lastSim=null,ws=null,authMode='login',authMessage='',authSubmitting=false,portalSelected=false,problemAssignees=[],problemNotice='';
+
+async function api(path,options={}){
+  options.headers={...(options.headers||{}),'Content-Type':'application/json'};
+  if(token)options.headers.Authorization='Bearer '+token;
+  const response=await fetch(path,options);
+  const data=await response.json().catch(()=>({}));
+  if(!response.ok)throw new Error(data.error||'Request failed');
+  return data;
+}
+function esc(v=''){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}
+function pill(s){const cls=['Critical','Failed'].includes(s)?'red':['High','Medium','Warning','Reported','Assigned','In Progress'].includes(s)?'yellow':'green';return `<span class="pill ${cls}">${esc(s||'Unknown')}</span>`}
+function card(label,value,color=''){return `<div class="card"><div class="muted">${label}</div><div class="metric" ${color?`style="color:${color}"`:''}>${value}</div></div>`}
+function pageTop(title){return `<div class="top"><h2>${title}</h2><div><span class="muted">${esc(user?.display_name||user?.username||'')} · </span><strong>${esc(role)}</strong></div></div>`}
+
+async function loadData(){
+  [resources,dependencies,problems,simulations,analyticsData]=await Promise.all([
+    api('/api/resources'),api('/api/dependencies'),api('/api/problems'),
+    api('/api/simulations'),api('/api/analytics')
+  ]);
+}
+function resourceName(id){return resources.find(r=>r.id===id)?.name||id}
+
+function loginView(){
+  const registering=authMode==='register';
+  $('#app').innerHTML=`<div class="login"><div class="login-box">
+  <div class="login-brand"><div class="brand">OMNIS-X</div><div class="brand-sub">Intelligent Institutional Digital Twin</div></div>
+  <form class="card" onsubmit="submitAuthForm(event);return false"><h3>${registering?'Create an Account':'Secure Sign In'}</h3>
+    ${registering?'<label for="display-name">Full name</label><input id="display-name" name="display_name" autocomplete="name" minlength="2" maxlength="80" required style="width:100%">':''}
+    <label for="username">Username</label><input id="username" name="username" autocomplete="username" minlength="3" maxlength="32" required style="width:100%">
+    <label for="password">Password</label><input id="password" name="password" type="password" autocomplete="${registering?'new-password':'current-password'}" ${registering?'minlength="8" maxlength="128"':''} required style="width:100%">
+    ${registering?'<label for="confirm-password">Confirm password</label><input id="confirm-password" name="confirm_password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required style="width:100%">':''}
+    <br><br><button id="auth-submit" type="submit" ${authSubmitting?'disabled':''}>${authSubmitting?(registering?'Creating account...':'Signing in...'):(registering?'Create account':'Sign in')}</button>
+    <button class="secondary" type="button" style="margin-left:6px" onclick="setAuthMode('${registering?'login':'register'}')">${registering?'Back to sign in':'Create new account'}</button>
+    <div id="auth-message" class="${authMessage?(registering?'auth-error':'auth-success'):'muted'}" role="status" aria-live="polite" style="margin-top:12px">${esc(authMessage)}</div>
+    ${registering?'<div class="muted" style="margin-top:8px">New accounts are created with access to the Student portal. Choose a username not already registered.</div>':'<div class="muted" style="margin-top:8px">Sign in with your account to open your Admin, Lecturer, Student, or Local Staff portal.</div><div class="notice" style="margin-top:10px"><strong>Local demo accounts</strong><br>Admin: admin / admin123<br>Student: student / demo123<br>Lecturer: lecturer / demo123<br>Local Staff: staff / demo123</div>'}
+  </form></div></div>`;
+}
+function setAuthMode(mode){
+  const username=$('#username')?.value||'';
+  authMode=mode;
+  authMessage='';
+  loginView();
+  $('#username').value=username.trim().toLowerCase();
+}
+function portalSelectionView(){
+  const portals=[
+    ['Admin','Full institutional control'],
+    ['Lecturer','Teaching, timetables, and academic reports'],
+    ['Student','Campus information and problem reporting'],
+    ['Local Staff','Assigned maintenance tasks']
+  ];
+  $('#app').innerHTML=`<div class="login"><div class="portal-select">
+    <div class="login-brand"><div class="brand">OMNIS-X</div><div class="brand-sub">Choose your portal</div></div>
+    <div class="portal-grid">${portals.map(([portal,description])=>{
+      const available=portal===role;
+      return `<button type="button" class="portal-card" ${available?`onclick="enterPortal('${portal}')"`:'disabled'}>
+        <h3>${portal} Portal${available?' · Your account':''}</h3>
+        <div>${description}</div>
+        <div class="muted" style="margin-top:12px">${available?'Open your dashboard':'Sign in with a '+portal+' account to access this portal.'}</div>
+      </button>`;
+    }).join('')}</div>
+    <div class="muted" style="text-align:center;margin-top:14px">Signed in as ${esc(user?.display_name||user?.username||'')} · ${esc(role)}</div>
+  </div></div>`;
+}
+async function enterPortal(selectedRole){
+  if(selectedRole!==role)return;
+  portalSelected=true;
+  page='problems';
+  await loadData();
+  connectWS();
+  await render();
+}
+async function submitAuthForm(event){
+  event.preventDefault();
+  if(authSubmitting)return;
+  authSubmitting=true;
+  const submitButton=$('#auth-submit');
+  if(submitButton){submitButton.disabled=true;submitButton.textContent=authMode==='register'?'Creating account...':'Signing in...'}
+  const username=$('#username').value.trim().toLowerCase();
+  const password=$('#password').value;
+  let accountCreated=false;
+  try{
+    if(authMode==='register'){
+      const displayName=$('#display-name').value.trim();
+      if(password!==$('#confirm-password').value){
+        throw new Error('Passwords do not match.');
+      }
+      await api('/api/register',{method:'POST',body:JSON.stringify({
+        display_name:displayName,username,password
+      })});
+      accountCreated=true;
+    }
+    const result=await api('/api/login',{method:'POST',body:JSON.stringify({username,password})});
+    token=result.token;user=result.user;role=result.user.role;
+    portalSelected=false;
+    authMessage='';
+    await render();
+  }catch(error){
+    if(accountCreated){
+      authMode='login';
+      authMessage='Your account was created. Sign in with the username and password you just chose.';
+      loginView();
+      $('#username').value=username;
+    }else{
+      authMessage=error.message==='Invalid username or password'
+        ?'Username or password is incorrect. Check your details and try again.'
+        :error.message;
+      const message=$('#auth-message');
+      if(message){message.textContent=authMessage;message.className='auth-error'}
+    }
+  }finally{
+    authSubmitting=false;
+    const button=$('#auth-submit');
+    if(button){button.disabled=false;button.textContent=authMode==='register'?'Create account':'Sign in'}
+  }
+}
+function nav(){
+  const items=role==='Admin'?NAV.filter(([id])=>!['sim','recovery'].includes(id)):NAV;
+  return `<aside><div class="brand">OMNIS-X</div><div class="brand-sub">Intelligent Institutional Digital Twin</div><div class="online">● Online</div><nav>${items.map(([id,label])=>`<a class="${page===id?'active':''}" onclick="go('${id}')">${role==='Admin'&&id==='problems'?'Incoming Reports':label}</a>`).join('')}</nav></aside>`;
+}
+
+async function dashboardPage(){
+  const d=await api('/api/dashboard');
+  const frame=`<iframe id="twin-frame" class="twin-frame" src="/twin/ifc_viewer_combined.html"></iframe>`;
+  const detail=selectedResource?await resourceDetailHtml(selectedResource):'<div class="muted">Click a building in the existing 3D campus to view live backend information.</div>';
+  return `<main>${pageTop(`${role} Portal – 3D Campus Digital Twin`)}<div class="grid g4">
+    ${card('Total students',d.students)}${card('Total lecturers',d.lecturers)}${card('Total staff',d.staff)}
+    ${card('Total buildings',d.buildings)}${card('Total laboratories',d.laboratories)}${card('Total classrooms',d.classrooms)}
+    ${card('Active problems',d.active_problems)}${card('Resolved problems',d.resolved_problems)}
+    ${card('Critical alerts',d.critical_alerts,'var(--red)')}${card('Campus health',d.campus_health+'%','var(--green)')}
+    </div><div class="grid g2" style="margin-top:12px"><div class="card">${frame}</div><div class="card"><h3>Selected building</h3>${detail}</div></div>
+    <div class="card" style="margin-top:12px"><h3>Recent activities</h3>${d.recent_activities.length?d.recent_activities.map(p=>`<div>${pill(p.priority)} ${esc(p.title)} · ${esc(p.status)} · ${esc(p.location||'No location')}</div>`).join(''):'<span class="muted">No reported problems.</span>'}</div></main>`;
+}
+async function resourceDetailHtml(id){
+  try{
+    const d=await api('/api/resources/'+id);
+    return `<h3>${esc(d.name)}</h3>${pill(d.status)}<p class="muted">${esc(d.category)}<br>Students: ${d.affected.students} · Lecturers: ${d.affected.lecturers}</p>
+      <b>Depends on:</b> ${d.depends_on.map(resourceName).join(', ')||'None'}<br>
+      <b>Supports:</b> ${d.supports.map(resourceName).join(', ')||'None'}<br>
+      <b>Active problems:</b> ${d.active_problems.length}`;
+  }catch(error){return `<span class="red">${esc(error.message)}</span>`}
+}
+
+async function problemsPage(){
+  const isAdmin=role==='Admin';
+  const canReport=['Student','Lecturer','Local Staff'].includes(role);
+  if(isAdmin)problemAssignees=await api('/api/problem-assignees');
+  const urgent=problems.filter(p=>['High','Critical'].includes(p.priority)&&p.status!=='Resolved');
+  const form=canReport?`<form class="card" onsubmit="createProblem(event);return false">
+    <h3>Report a campus problem</h3>
+    <label for="problem-title">Problem title</label><input id="problem-title" required maxlength="160" style="width:100%" placeholder="Briefly describe the issue">
+    <label for="problem-category">Category</label><select id="problem-category" required><option>Other</option><option>Academic</option><option>Infrastructure</option><option>Student-related</option><option>Staff and Administration</option><option>Transportation</option><option>Safety and Emergency</option></select>
+    <label for="problem-location">Location / building</label><input id="problem-location" maxlength="160" style="width:100%" placeholder="Example: Computer Laboratory">
+    <label for="problem-description">What happened?</label><textarea id="problem-description" rows="4" required maxlength="2000" style="width:100%" placeholder="Include details that will help the team respond"></textarea>
+    <label for="problem-priority">Problem level</label><select id="problem-priority" required>
+      <option value="" selected disabled>Choose a level</option><option value="Low">Low — minor issue</option><option value="Medium">Medium — service affected</option>
+      <option value="High">High — urgent disruption</option><option value="Critical">Critical — immediate safety or emergency risk</option></select>
+    <div class="muted" style="margin-top:8px">High and Critical reports go to Admin. Low and Medium reports are sent to Google Gemini for automatic AI-assisted resolution. The report title, description, category, and location are shared; do not include sensitive personal information.</div>
+    <div id="problem-notice" class="notice" role="status" style="margin-top:10px" ${problemNotice?'':'hidden'}>${esc(problemNotice)}</div>
+    <br><button type="submit">Submit problem</button></form>`:'';
+  const reporterHeader=isAdmin?'<th>Reported by</th>':'';
+  const actionHeader=isAdmin?'':'<th>Actions</th>';
+  const departments=['Academic','Infrastructure','Maintenance','Security','Administration','Transport','Student-related','Safety and Emergency','Other'];
+  const rows=problems.map(p=>{
+    const reporter=isAdmin?`<td>${esc(p.reporter_name||p.reported_by||'Unknown')}<div class="muted">${esc(p.reporter_role||'')}</div></td>`:'';
+    const assignment=isAdmin?`<td><div class="muted">${p.assigned_to?`Assigned to ${esc(p.assigned_to)}${p.assigned_department?` · ${esc(p.assigned_department)}`:''}`:'Unassigned'}</div>
+      ${p.status==='Resolved'?'<div class="muted" style="margin-top:6px">Closed</div>':`<div class="flex" style="margin-top:6px"><select id="assignee-${esc(p.id)}" aria-label="Assign to">
+        <option value="" ${p.assigned_to?'':'selected'} disabled>Select assignee</option>${problemAssignees.map(a=>`<option value="${esc(a.username)}" ${p.assigned_to===a.username?'selected':''}>${esc(a.display_name)} (@${esc(a.username)}) · ${esc(a.role)}</option>`).join('')}
+      </select><select id="department-${esc(p.id)}" aria-label="Responsible department">${departments.map(d=>`<option ${p.assigned_department===d||(!p.assigned_department&&p.category===d)?'selected':''}>${esc(d)}</option>`).join('')}</select>
+      <button class="secondary" onclick="assignProblem('${esc(p.id)}')" ${problemAssignees.length?'':'disabled'}>${p.assigned_to?'Reassign':'Assign'}</button>
+      <button class="success" onclick="resolveProblem('${esc(p.id)}')">Resolve</button></div>`}</td>`:`<td>${p.assigned_to?`${esc(p.assigned_to)}${p.assigned_department?` · ${esc(p.assigned_department)}`:''}`:'Not assigned'}</td>`;
+    const canWork=!isAdmin&&['Lecturer','Local Staff'].includes(role)&&p.assigned_to===user.username&&p.status!=='Resolved';
+    const actions=canWork?`${p.status!=='In Progress'?`<button class="secondary" onclick="updateProblemStatus('${esc(p.id)}','In Progress')">Start work</button> `:''}<button class="success" onclick="resolveProblem('${esc(p.id)}')">Resolve</button>`:'—';
+    const solution=p.resolution_details?`<div class="notice" style="margin-top:6px"><strong>Resolution:</strong> ${esc(p.resolution_details)}</div>`:'';
+    return `<tr><td>${esc(p.id)}</td><td><strong>${esc(p.title)}</strong><div class="muted">${esc(p.description||'')}</div>${solution}</td>${reporter}<td>${esc(p.category)}</td><td>${esc(p.location||'-')}</td><td>${pill(p.priority)}</td><td>${pill(p.status)}</td>${assignment}${isAdmin?'':`<td>${actions}</td>`}</tr>`;
+  }).join('');
+  const attention=isAdmin?`<div class="notice" role="status" style="margin-bottom:12px"><strong>Admin attention queue:</strong> ${urgent.length} open High/Critical report${urgent.length===1?'':'s'} prioritized. All student, lecturer, and local staff reports appear here.
+    ${urgent.length?`<div style="margin-top:6px">${urgent.map(p=>`${pill(p.priority)} ${esc(p.title)} · ${esc(p.reporter_name||p.reported_by||'Unknown')}`).join('<br>')}</div>`:' No urgent reports are waiting.'}</div>`:
+    '<div class="notice" style="margin-bottom:12px">Use this page to report a problem and track your reports or work assigned to you. High and Critical reports go to Admin; Low and Medium reports receive automatic Gemini AI guidance.</div>';
+  const colspan=8;
+  return `<main>${pageTop(isAdmin?'Incoming Problem Reports':'Report & Track Problems')}${attention}<div class="${canReport?'grid g2':''}">${form}<div class="card"><h3>${isAdmin?'All reported problems':'My reports and assigned problems'}</h3><div class="table-wrap"><table><thead><tr><th>ID</th><th>Problem</th>${reporterHeader}<th>Category</th><th>Location</th><th>Priority</th><th>Status</th><th>${isAdmin?'Assignment & actions':'Assignment'}</th>${actionHeader}</tr></thead><tbody>${rows||`<tr><td colspan="${colspan}" class="muted">${isAdmin?'No problem reports have been submitted.':'You have no reports or assigned problems.'}</td></tr>`}</tbody></table></div></div></div></main>`;
+}
+
+async function simulationPage(){
+  return `<main>${pageTop('Failure Simulation')}<div class="grid g2"><div class="card"><h3>Configure simulation</h3>
+    <label>Failure resource</label><select id="sim-resource">${resources.map(r=>`<option value="${r.id}">${esc(r.name)}</option>`).join('')}</select>
+    <label>Failure type</label><select id="sim-type"><option>Power failure</option><option>Network failure</option><option>Laboratory failure</option><option>Faculty absence</option><option>Classroom unavailability</option><option>Transportation disruption</option><option>Hostel infrastructure failure</option><option>Custom failure</option></select>
+    <div class="flex"><div><label>Severity</label><select id="sim-severity"><option>Low</option><option>Medium</option><option>High</option><option>Critical</option></select></div><div><label>Duration (hours)</label><input id="sim-duration" type="number" min="1" value="3"></div></div><br><button onclick="runSimulation()">Run cascading simulation</button></div>
+    <div class="card" id="simulation-result"><h3>Impact analysis</h3><div class="muted">Run a simulation to calculate real database relationships.</div></div></div>
+    <div class="card" style="margin-top:12px"><h3>Simulation history</h3><div class="table-wrap"><table><tr><th>ID</th><th>Resource</th><th>Severity</th><th>Downtime</th><th>Students</th><th>Lecturers</th><th>Blast radius</th><th>Risk</th></tr>${simulations.map(s=>`<tr><td>${esc(s.id)}</td><td>${esc(resourceName(s.resource_id))}</td><td>${esc(s.severity)}</td><td>${s.duration}h</td><td>${s.students}</td><td>${s.lecturers}</td><td>${s.blast_radius}%</td><td>${esc(s.risk_level)}</td></tr>`).join('')||'<tr><td colspan="8" class="muted">No simulations.</td></tr>'}</table></div></div></main>`;
+}
+
+async function recoveryPage(){
+  if(!recoveryPlans.length)return `<main>${pageTop('Recovery & Solution Planning')}<div class="card">Run a failure simulation or submit a problem before generating solutions.</div></main>`;
+  const best=recoveryPlans.find(p=>p.recommended);
+  return `<main>${pageTop('Recovery & Solution Planning')}<div class="grid g2">${recoveryPlans.map(p=>`<div class="card ${p.recommended?'best':''}"><h3>${esc(p.name)} ${p.recommended?'<span class="pill green">Recommended</span>':''}</h3><p>Estimated delay: ${p.estimated_delay} min<br>Cost: ₹${p.cost}<br>Capacity: ${p.capacity}<br>Constraint violations: ${p.constraint_violations}<br>Feasibility: ${p.feasibility_score}/100</p></div>`).join('')}</div>
+  <div class="card" style="margin-top:12px"><h3>Recommendation rationale</h3>${esc(best?.reason||'')}${role==='Admin'?`<br><br><button class="success" onclick="approveRecovery('${best?.id}','Approved')">Approve</button> <button class="danger" onclick="approveRecovery('${best?.id}','Rejected')">Reject</button>`:'<p class="muted">Only administrators can approve or reject solutions.</p>'}</div></main>`;
+}
+
+async function analyticsPage(){
+  const risks=(analyticsData?.resource_risk||[]).slice(0,10);
+  const problemsData=(analyticsData?.problems||[]);
+  const categories={};problemsData.forEach(p=>categories[p.category]=(categories[p.category]||0)+1);
+  return `<main>${pageTop('Analytics & Reports')}<div class="grid g2"><div class="card"><h3>Database resource risk</h3>${risks.map(r=>`<div class="bar"><span>${esc(r.name)}</span><i style="width:${r.risk}%"></i><span>${r.risk}</span></div>`).join('')||'<span class="muted">No risk records.</span>'}</div>
+  <div class="card"><h3>Problem categories</h3>${Object.entries(categories).map(([name,count])=>`<div>${esc(name)}: <strong>${count}</strong></div>`).join('')||'<span class="muted">No reported problems.</span>'}</div>
+  <div class="card" style="grid-column:1/-1"><h3>Data reliability notice</h3><div class="notice">The platform reports live database records and user submissions. Failure simulations are explicitly simulated data. No claims of physical IoT detection are made without an external sensor integration.</div></div></div></main>`;
+}
+
+async function pages(){
+  if(role==='Admin'&&['sim','recovery'].includes(page))page='problems';
+  if(page==='dash')return await dashboardPage();
+  if(page==='problems')return await problemsPage();
+  if(page==='sim')return await simulationPage();
+  if(page==='recovery')return await recoveryPage();
+  return await analyticsPage();
+}
+async function render(){
+  if(!token){loginView();return}
+  if(!portalSelected){portalSelectionView();return}
+  $('#app').innerHTML=`<div id="shell">${nav()}<div id="content"></div></div>`;
+  $('#content').innerHTML=await pages();
+}
+async function go(next){
+  if(role==='Admin'&&['sim','recovery'].includes(next))return;
+  page=next;
+  if(next!=='problems')problemNotice='';
+  if(['dash','problems','sim','analytics'].includes(next))await loadData();
+  await render();
+}
+
+async function createProblem(event){
+  event.preventDefault();
+  try{
+    const result=await api('/api/problems',{method:'POST',body:JSON.stringify({
+      title:$('#problem-title').value,category:$('#problem-category').value,
+      location:$('#problem-location').value,description:$('#problem-description').value,
+      priority:$('#problem-priority').value
+    })});
+    problemNotice=result.auto_resolved
+      ?`Report ${result.id} was automatically resolved with Gemini AI guidance: ${result.resolution_details}`
+      :`Report ${result.id} submitted as ${result.priority} priority and sent to the Admin portal.`;
+    await loadData();await render();
+  }catch(error){
+    problemNotice=error.message;
+    const notice=$('#problem-notice');
+    if(notice){notice.textContent=problemNotice;notice.hidden=false}
+  }
+}
+async function assignProblem(id){
+  const assigned_to=document.getElementById(`assignee-${id}`)?.value;
+  const assigned_department=document.getElementById(`department-${id}`)?.value;
+  if(!assigned_to){alert('Select a lecturer or local staff member to assign this report.');return}
+  try{await api('/api/problems/'+id+'/assign',{method:'POST',body:JSON.stringify({assigned_department,assigned_to,note:'Assigned by administrator'})});problemNotice=`Problem ${id} assigned to ${assigned_to}.`;await loadData();await render()}
+  catch(error){alert(error.message)}
+}
+async function updateProblemStatus(id,status){
+  try{await api('/api/problems/'+id,{method:'PATCH',body:JSON.stringify({status})});await loadData();await render()}
+  catch(error){alert(error.message)}
+}
+async function resolveProblem(id){
+  const resolution_details=prompt('Resolution details:','Resolved and verified');
+  if(resolution_details===null)return;
+  try{await api('/api/problems/'+id+'/resolve',{method:'PATCH',body:JSON.stringify({resolution_details})});problemNotice=`Problem ${id} marked resolved.`;await loadData();await render()}
+  catch(error){alert(error.message)}
+}
+async function runSimulation(){
+  try{
+    lastSim=await api('/api/simulations',{method:'POST',body:JSON.stringify({
+      resource_id:$('#sim-resource').value,failure_type:$('#sim-type').value,
+      severity:$('#sim-severity').value,duration:+$('#sim-duration').value
+    })});
+    recoveryPlans=lastSim.plans;await loadData();
+    $('#simulation-result').innerHTML=`<h3>Impact analysis</h3><div class="grid g4">${card('Affected students',lastSim.students)}${card('Affected lecturers',lastSim.lecturers)}${card('Blast radius',lastSim.blast_radius+'%')}</div>
+      <p><b>Campus risk:</b> ${pill(lastSim.risk_level)}</p><b>Initial failure:</b> ${esc(resourceName(lastSim.resource))}<br><b>Direct impact:</b> ${lastSim.direct.map(resourceName).join(', ')||'None'}<br><b>Indirect impact:</b> ${lastSim.indirect.map(resourceName).join(', ')||'None'}<br><br><button onclick="go('recovery')">Open recovery planning</button>`;
+  }catch(error){alert(error.message)}
+}
+async function approveRecovery(id,decision){
+  try{await api('/api/recovery/'+id+'/decision',{method:'POST',body:JSON.stringify({decision})});await render()}
+  catch(error){alert(error.message)}
+}
+function connectWS(){
+  const protocol=location.protocol==='https:'?'wss':'ws';
+  ws=new WebSocket(protocol+'://'+location.host+'/ws');
+  ws.onmessage=event=>{
+    const message=JSON.parse(event.data);
+    if(message.resources){
+      const frame=$('#twin-frame');if(frame)frame.contentWindow.postMessage({type:'omnis_resource_status',resources:message.resources},'*');
+    }
+    if(['problem_changed','simulation_created','recovery_decision'].includes(message.type))loadData().then(render);
+  };
+  ws.onclose=()=>setTimeout(connectWS,3000);
+}
+window.addEventListener('message',async event=>{
+  if(event.data?.type!=='twin_room_selected')return;
+  const text=(event.data.resourceHint||event.data.roomDescription||'').toLowerCase();
+  selectedResource=text.includes('computer')||text.includes('lab')?'cl':text.includes('ai')?'ai':text.includes('exam')?'exam':text.includes('hostel')?'host':text.includes('bus')?'bus':text.includes('network')?'net':text.includes('power')?'power':'room';
+  await render();
+});
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,5434 @@
+{
+  "organizationId": "10",
+  "locationId": "7",
+  "fetchedAt": "2026-03-14T17:04:47.489367Z",
+  "sensorType": "counter",
+  "totalSensors": 175,
+  "sensors": [
+    {
+      "legacy_id": "3285063",
+      "id": "3285063",
+      "uuid": "5eb7516b-76b4-497c-a869-5fdcdc7683f2",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202389",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506796000,
+        "value": 47391,
+        "valid_to": 1773510696000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506796000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438934000,
+        "value": 47391,
+        "valid_to": 1773442834000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3285398",
+      "id": "3285398",
+      "uuid": "92e789d8-0946-4120-8f13-af9a2b36fd6e",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202329",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506704000,
+        "value": 46562,
+        "valid_to": 1773510604000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506704000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438842000,
+        "value": 46562,
+        "valid_to": 1773442742000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3285460",
+      "id": "3285460",
+      "uuid": "08efa03c-5233-4f9a-86a6-8846a8ddad23",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84102476",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506640000,
+        "value": 52361,
+        "valid_to": 1773510540000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506640000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438778000,
+        "value": 52361,
+        "valid_to": 1773442678000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3287047",
+      "id": "3287047",
+      "uuid": "c0eab718-b6dd-4ff4-90af-a7457f0a58a7",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202799",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506769000,
+        "value": 50452,
+        "valid_to": 1773510669000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506769000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438907000,
+        "value": 50452,
+        "valid_to": 1773442807000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3287141",
+      "id": "3287141",
+      "uuid": "2e59ae86-96ac-4ee6-aba2-f546b4fa24ba",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90201815",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506635000,
+        "value": 7342,
+        "valid_to": 1773510535000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506635000,
+      "last_status": {
+        "battery_level": 0.89
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437933000,
+        "value": 7334,
+        "valid_to": 1773441833000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3287151",
+      "id": "3287151",
+      "uuid": "7869a494-534c-4759-b7d2-f3fe36bb4e37",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84102878",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1766741682000,
+        "value": 310882,
+        "valid_to": 1766745582000,
+        "increment": 0
+      },
+      "last_communication_time": 1766741682000,
+      "last_status": {
+        "battery_level": 0.02
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1766699921000,
+        "value": 310882,
+        "valid_to": 1766703821000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3287570",
+      "id": "3287570",
+      "uuid": "4c0e2529-cedc-46ad-8af7-1ed23f7ab627",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202743",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1759403775000,
+        "value": 6629,
+        "valid_to": 1759407675000,
+        "increment": 0
+      },
+      "last_communication_time": 1759403775000,
+      "last_status": {
+        "battery_level": 0.02
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1759351333000,
+        "value": 6620,
+        "valid_to": 1759355233000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3288073",
+      "id": "3288073",
+      "uuid": "974a2fa8-0e50-4316-b48e-710f5924f066",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90201600",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1743870551000,
+        "value": 21,
+        "valid_to": 1743874451000,
+        "increment": 0
+      },
+      "last_communication_time": 1743870551000,
+      "last_status": {
+        "battery_level": 0.03
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1743800118000,
+        "value": 21,
+        "valid_to": 1743804018000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3288183",
+      "id": "3288183",
+      "uuid": "dfede2a8-362b-42fc-932d-f80d4a5f7670",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90203167",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506245000,
+        "value": 48649,
+        "valid_to": 1773510145000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506245000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438383000,
+        "value": 48649,
+        "valid_to": 1773442283000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3288520",
+      "id": "3288520",
+      "uuid": "42925c29-dec8-4d2f-8dd0-9afef5c8a8b4",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90203182",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506630000,
+        "value": 83413,
+        "valid_to": 1773510530000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507248000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438768000,
+        "value": 83413,
+        "valid_to": 1773442668000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3289606",
+      "id": "3289606",
+      "uuid": "62d7a6be-1d11-433a-ab31-dcf35356138b",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90201872",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506952000,
+        "value": 28160,
+        "valid_to": 1773510852000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506952000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439090000,
+        "value": 28160,
+        "valid_to": 1773442990000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3289732",
+      "id": "3289732",
+      "uuid": "fb5bca21-53e0-41aa-bf2b-ea828526ba5f",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202341",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507063000,
+        "value": 18880,
+        "valid_to": 1773510963000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507063000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437461000,
+        "value": 18880,
+        "valid_to": 1773441361000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3289733",
+      "id": "3289733",
+      "uuid": "d08d32fb-9fcb-4e70-b226-42f454d54fd8",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84101260",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507379000,
+        "value": 83903,
+        "valid_to": 1773511279000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507379000,
+      "last_status": {
+        "battery_level": 0.94
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437777000,
+        "value": 83903,
+        "valid_to": 1773441677000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3290389",
+      "id": "3290389",
+      "uuid": "4e2a38f9-41e6-41ee-a55b-4dc46d1c25ef",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202344",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506716000,
+        "value": 55350,
+        "valid_to": 1773510616000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506716000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438854000,
+        "value": 55350,
+        "valid_to": 1773442754000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3290505",
+      "id": "3290505",
+      "uuid": "5a838870-bc97-447c-80e4-1e781a000a6e",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202865",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507600000,
+        "value": 37830,
+        "valid_to": 1773511500000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507600000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437998000,
+        "value": 37830,
+        "valid_to": 1773441898000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3291365",
+      "id": "3291365",
+      "uuid": "2f3e119e-d368-43e1-9715-1fe2da9cc3ee",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202343",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507074000,
+        "value": 97960,
+        "valid_to": 1773510974000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507074000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437472000,
+        "value": 97960,
+        "valid_to": 1773441372000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3291964",
+      "id": "3291964",
+      "uuid": "1a3c5218-34c0-4310-8808-f4202e3e7156",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202471",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507761000,
+        "value": 91447,
+        "valid_to": 1773511661000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507761000,
+      "last_status": {
+        "battery_level": 0.89
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438159000,
+        "value": 91447,
+        "valid_to": 1773442059000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3293192",
+      "id": "3293192",
+      "uuid": "ea5ab7e3-ae29-4c8b-8ab3-aca7f1f1323f",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90201867",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506733000,
+        "value": 20233,
+        "valid_to": 1773510633000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506733000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438211000,
+        "value": 20231,
+        "valid_to": 1773442111000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3294523",
+      "id": "3294523",
+      "uuid": "2b206708-d7b2-43af-bb88-58dd9ccd8416",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202795",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507633000,
+        "value": 124134,
+        "valid_to": 1773511533000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507633000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437971000,
+        "value": 124102,
+        "valid_to": 1773441871000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3294524",
+      "id": "3294524",
+      "uuid": "1669b74e-b244-4f7e-95dc-26a6fac6aa5d",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202866",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1752239552000,
+        "value": 61296,
+        "valid_to": 1752243452000,
+        "increment": 0
+      },
+      "last_communication_time": 1752239552000,
+      "last_status": {
+        "battery_level": 0.97
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1752181050000,
+        "value": 61261,
+        "valid_to": 1752184950000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3294612",
+      "id": "3294612",
+      "uuid": "821f0a37-1e62-4d9b-91da-a8dd2d162296",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202330",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506212000,
+        "value": 134849,
+        "valid_to": 1773510112000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506212000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438350000,
+        "value": 134849,
+        "valid_to": 1773442250000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3294803",
+      "id": "3294803",
+      "uuid": "0a82a672-ed30-4145-8d76-1b52776a8038",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84102258",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507352000,
+        "value": 20067,
+        "valid_to": 1773511252000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507352000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437750000,
+        "value": 20067,
+        "valid_to": 1773441650000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3294901",
+      "id": "3294901",
+      "uuid": "05a12829-246c-4410-92ba-0d6df8f770da",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202193",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506217000,
+        "value": 127778,
+        "valid_to": 1773510117000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506217000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438356000,
+        "value": 127778,
+        "valid_to": 1773442256000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3294950",
+      "id": "3294950",
+      "uuid": "5df88d8d-9c51-496a-a8e8-1d2bc91da580",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202475",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507646000,
+        "value": 183463,
+        "valid_to": 1773511546000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507646000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437804000,
+        "value": 183438,
+        "valid_to": 1773441704000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3294970",
+      "id": "3294970",
+      "uuid": "589bf11c-b628-41d6-afb8-806acf822519",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84102259",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506376000,
+        "value": 8245,
+        "valid_to": 1773510276000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507707000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438514000,
+        "value": 8245,
+        "valid_to": 1773442414000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3295045",
+      "id": "3295045",
+      "uuid": "77befcce-934c-43e1-9ef7-b70142898a27",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202382",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506860000,
+        "value": 39843,
+        "valid_to": 1773510760000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506860000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438997000,
+        "value": 39843,
+        "valid_to": 1773442897000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3295091",
+      "id": "3295091",
+      "uuid": "310508b6-d25c-45e6-b9dd-d24f218e5c22",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202867",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506158000,
+        "value": 22028,
+        "valid_to": 1773510058000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506158000,
+      "last_status": {
+        "battery_level": 0.95
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438296000,
+        "value": 22028,
+        "valid_to": 1773442196000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3295185",
+      "id": "3295185",
+      "uuid": "7a6ef7b0-6b56-4d70-ab55-128fcd326526",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84102471",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507434000,
+        "value": 62442,
+        "valid_to": 1773511334000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507434000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437832000,
+        "value": 62442,
+        "valid_to": 1773441732000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3295581",
+      "id": "3295581",
+      "uuid": "b29dd48a-0497-4d3b-bfaf-e5a2e5566266",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202340",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506968000,
+        "value": 21228,
+        "valid_to": 1773510868000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506968000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439105000,
+        "value": 21228,
+        "valid_to": 1773443005000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3295645",
+      "id": "3295645",
+      "uuid": "9b5c89d4-f75a-44f3-a265-16a1b5bf315a",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90203001",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1763196609000,
+        "value": 70789,
+        "valid_to": 1763200509000,
+        "increment": 0
+      },
+      "last_communication_time": 1763196609000,
+      "last_status": {
+        "battery_level": 0.94
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1763151368000,
+        "value": 70789,
+        "valid_to": 1763155268000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3295704",
+      "id": "3295704",
+      "uuid": "1e4d724a-a7bd-4b8f-bb69-b14786650165",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202335",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506187000,
+        "value": 141459,
+        "valid_to": 1773510087000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506187000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438325000,
+        "value": 141459,
+        "valid_to": 1773442225000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3296163",
+      "id": "3296163",
+      "uuid": "d59cf3a4-8d29-48f5-8644-0e73cdfed10f",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84101249",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506194000,
+        "value": 6840,
+        "valid_to": 1773510094000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506194000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438333000,
+        "value": 6840,
+        "valid_to": 1773442233000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3296257",
+      "id": "3296257",
+      "uuid": "d65ff83b-f84c-497c-be99-333267990dd0",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202336",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506381000,
+        "value": 20634,
+        "valid_to": 1773510281000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506381000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438519000,
+        "value": 20634,
+        "valid_to": 1773442419000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3296745",
+      "id": "3296745",
+      "uuid": "b853bde8-1be8-4571-97d4-7c002e9b70ff",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202188",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507033000,
+        "value": 101240,
+        "valid_to": 1773510933000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507033000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439171000,
+        "value": 101240,
+        "valid_to": 1773443071000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3296803",
+      "id": "3296803",
+      "uuid": "aeca623b-ce92-4da0-b1d3-0d523f1f3aa2",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202180",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507430000,
+        "value": 31942,
+        "valid_to": 1773511330000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507430000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437827000,
+        "value": 31942,
+        "valid_to": 1773441727000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3297293",
+      "id": "3297293",
+      "uuid": "d4e03066-495a-4851-9c2d-b9a4530b9eb2",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202752",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507600000,
+        "value": 104123,
+        "valid_to": 1773511500000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507600000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439138000,
+        "value": 104112,
+        "valid_to": 1773443038000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3297300",
+      "id": "3297300",
+      "uuid": "504e875d-ca90-463b-87f5-2a4e0aad8c88",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202334",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506675000,
+        "value": 52569,
+        "valid_to": 1773510575000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506675000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438814000,
+        "value": 52569,
+        "valid_to": 1773442714000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3297338",
+      "id": "3297338",
+      "uuid": "b6f35d60-47ba-4a7d-b802-a263f59705d2",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202184",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507008000,
+        "value": 75213,
+        "valid_to": 1773510908000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507008000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439146000,
+        "value": 75213,
+        "valid_to": 1773443046000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3297423",
+      "id": "3297423",
+      "uuid": "06b79755-4b84-4285-a3e8-4f144ea59b28",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202199",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506325000,
+        "value": 41199,
+        "valid_to": 1773510225000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506325000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438464000,
+        "value": 41199,
+        "valid_to": 1773442364000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3297593",
+      "id": "3297593",
+      "uuid": "31209db0-1b68-4fa1-8348-7ef406ee5f38",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202197",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1755533492000,
+        "value": 48809,
+        "valid_to": 1755537392000,
+        "increment": 0
+      },
+      "last_communication_time": 1755533492000,
+      "last_status": {
+        "battery_level": 0.03
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1755463650000,
+        "value": 48528,
+        "valid_to": 1755467550000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3297814",
+      "id": "3297814",
+      "uuid": "de68db74-fa46-4c7c-a83f-11114411deb3",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202775",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507137000,
+        "value": 59662,
+        "valid_to": 1773511037000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507137000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437535000,
+        "value": 59662,
+        "valid_to": 1773441435000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3297942",
+      "id": "3297942",
+      "uuid": "a2f45681-dbb4-4a43-966d-605dbbc77c01",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202185",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506437000,
+        "value": 11100,
+        "valid_to": 1773510337000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506437000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438575000,
+        "value": 11100,
+        "valid_to": 1773442475000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3298062",
+      "id": "3298062",
+      "uuid": "f483b388-6571-44be-9afc-0e51428edc51",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90203043",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1741753922000,
+        "value": 158795,
+        "valid_to": 1741757822000,
+        "increment": 0
+      },
+      "last_communication_time": 1741753922000,
+      "last_status": {
+        "battery_level": 0.02
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1741729562000,
+        "value": 158795,
+        "valid_to": 1741733462000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3298245",
+      "id": "3298245",
+      "uuid": "7a777d9d-ab00-411f-91bf-86a3b775470d",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90201593",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507329000,
+        "value": 206212,
+        "valid_to": 1773511229000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507329000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437727000,
+        "value": 206212,
+        "valid_to": 1773441627000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3298569",
+      "id": "3298569",
+      "uuid": "52fb5feb-7b8f-4ed8-8bf8-f39aa3b65144",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84102478",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507033000,
+        "value": 70344,
+        "valid_to": 1773510933000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507033000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439171000,
+        "value": 70344,
+        "valid_to": 1773443071000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3298574",
+      "id": "3298574",
+      "uuid": "ead7991b-16f3-4db3-9ff2-6c2529cccf75",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90203008",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1736005447000,
+        "value": 49153,
+        "valid_to": 1736009347000,
+        "increment": 0
+      },
+      "last_communication_time": 1736005447000,
+      "last_status": {
+        "battery_level": 0.02
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1735941064000,
+        "value": 49153,
+        "valid_to": 1735944964000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3298799",
+      "id": "3298799",
+      "uuid": "b928df08-f48b-4193-adee-3921337d67c8",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84102473",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1759603394000,
+        "value": 94215,
+        "valid_to": 1759607294000,
+        "increment": 0
+      },
+      "last_communication_time": 1759603394000,
+      "last_status": {
+        "battery_level": 0.02
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1759525092000,
+        "value": 94215,
+        "valid_to": 1759528992000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3298947",
+      "id": "3298947",
+      "uuid": "f5cb6c2f-3cf6-4161-aab7-355063f94a8b",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202107",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506950000,
+        "value": 31662,
+        "valid_to": 1773510850000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506950000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439088000,
+        "value": 31662,
+        "valid_to": 1773442988000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3299354",
+      "id": "3299354",
+      "uuid": "0467d5bc-0d8f-4afa-9777-6eb07c102fbe",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202177",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507644000,
+        "value": 16534,
+        "valid_to": 1773511544000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507644000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438042000,
+        "value": 16534,
+        "valid_to": 1773441942000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3299521",
+      "id": "3299521",
+      "uuid": "9467d4ac-91f3-435a-b3fc-12d2fe14ac2b",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84101996",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1737989432000,
+        "value": 95840,
+        "valid_to": 1737993332000,
+        "increment": 0
+      },
+      "last_communication_time": 1737989432000,
+      "last_status": {
+        "battery_level": 0.02
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1737927390000,
+        "value": 94374,
+        "valid_to": 1737931290000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3299623",
+      "id": "3299623",
+      "uuid": "4cff30d7-872d-47b8-b4a8-89d420f5dd1c",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90203047",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1750164817000,
+        "value": 43254,
+        "valid_to": 1750168717000,
+        "increment": 31
+      },
+      "last_communication_time": 1750164817000,
+      "last_status": {
+        "battery_level": 1.0
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1750107317000,
+        "value": 42275,
+        "valid_to": 1750111217000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3300377",
+      "id": "3300377",
+      "uuid": "79fd00fb-ec24-4e07-baa9-6d9d83314e9d",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202378",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506293000,
+        "value": 38122,
+        "valid_to": 1773510193000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506293000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438432000,
+        "value": 38122,
+        "valid_to": 1773442332000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3300378",
+      "id": "3300378",
+      "uuid": "516be355-980c-45f9-b067-8cbddb617cb2",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90201868",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507487000,
+        "value": 10997,
+        "valid_to": 1773511387000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507487000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437885000,
+        "value": 10997,
+        "valid_to": 1773441785000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3300896",
+      "id": "3300896",
+      "uuid": "7b504e4c-aaa1-43db-a2ae-bb91f40e156e",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202119",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507373000,
+        "value": 5001,
+        "valid_to": 1773511273000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507373000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437770000,
+        "value": 5001,
+        "valid_to": 1773441670000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3301165",
+      "id": "3301165",
+      "uuid": "5745e791-ccdd-4b69-85ef-c72504874475",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202070",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506220000,
+        "value": 77193,
+        "valid_to": 1773510120000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506220000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438358000,
+        "value": 77193,
+        "valid_to": 1773442258000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3301611",
+      "id": "3301611",
+      "uuid": "ebd9308f-7b2b-48f7-a45a-bdf6b545184e",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202872",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507581000,
+        "value": 24991,
+        "valid_to": 1773511481000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507581000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437979000,
+        "value": 24991,
+        "valid_to": 1773441879000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3301694",
+      "id": "3301694",
+      "uuid": "3272a108-8f6f-4ceb-a2df-2c489d0df195",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202797",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507133000,
+        "value": 4227,
+        "valid_to": 1773511033000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507133000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437531000,
+        "value": 4227,
+        "valid_to": 1773441431000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3301890",
+      "id": "3301890",
+      "uuid": "a48496ef-d4c2-4e82-8370-cbbd6a07c0be",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202693",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1758635779000,
+        "value": 45189,
+        "valid_to": 1758639679000,
+        "increment": 0
+      },
+      "last_communication_time": 1758635779000,
+      "last_status": {
+        "battery_level": 0.04
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1758574398000,
+        "value": 44961,
+        "valid_to": 1758578298000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3302597",
+      "id": "3302597",
+      "uuid": "e931c654-9e3d-4775-8d71-a60a67a2ede8",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202386",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507733000,
+        "value": 14972,
+        "valid_to": 1773511633000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507733000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438132000,
+        "value": 14972,
+        "valid_to": 1773442032000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3302853",
+      "id": "3302853",
+      "uuid": "c0576f11-0599-4247-bcd8-7ca1c050de15",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90201599",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1752207085000,
+        "value": 24442,
+        "valid_to": 1752210985000,
+        "increment": 0
+      },
+      "last_communication_time": 1752207085000,
+      "last_status": {
+        "battery_level": 0.04
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1752180983000,
+        "value": 24442,
+        "valid_to": 1752184883000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3304229",
+      "id": "3304229",
+      "uuid": "6773ee2e-9239-481c-9097-01616e5cf9d7",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202338",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506835000,
+        "value": 56879,
+        "valid_to": 1773510735000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506835000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438973000,
+        "value": 56879,
+        "valid_to": 1773442873000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3304816",
+      "id": "3304816",
+      "uuid": "b36c69bb-f5b3-41e9-be1b-75e2ee8e47b8",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202793",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507294000,
+        "value": 68837,
+        "valid_to": 1773511194000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507294000,
+      "last_status": {
+        "battery_level": 0.75
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437691000,
+        "value": 68837,
+        "valid_to": 1773441591000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3305221",
+      "id": "3305221",
+      "uuid": "d8b6f7f9-f8b3-4b72-950b-684564fc0c6e",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202383",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506725000,
+        "value": 202611,
+        "valid_to": 1773510625000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506725000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438863000,
+        "value": 202611,
+        "valid_to": 1773442763000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3305739",
+      "id": "3305739",
+      "uuid": "1ab62dd7-7bd6-4047-99dd-0da51c098da7",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202381",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507740000,
+        "value": 100289,
+        "valid_to": 1773511640000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507740000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438138000,
+        "value": 100289,
+        "valid_to": 1773442038000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3305865",
+      "id": "3305865",
+      "uuid": "061aeaf9-5ff1-4592-8d1d-ae14fff650d2",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202332",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507429000,
+        "value": 65160,
+        "valid_to": 1773511329000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507429000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437826000,
+        "value": 65160,
+        "valid_to": 1773441726000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3306265",
+      "id": "3306265",
+      "uuid": "a1c877d1-4861-4874-a0eb-660714da1803",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202110",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507625000,
+        "value": 2439,
+        "valid_to": 1773511525000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507625000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437963000,
+        "value": 2438,
+        "valid_to": 1773441863000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3306852",
+      "id": "3306852",
+      "uuid": "b968a516-0425-4ffa-8d8b-acdc5fa00c52",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202774",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506963000,
+        "value": 18554,
+        "valid_to": 1773510863000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506963000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439101000,
+        "value": 18554,
+        "valid_to": 1773443001000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3307004",
+      "id": "3307004",
+      "uuid": "2faa1a92-7272-4796-a78a-7c6213e30e54",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90203002",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506319000,
+        "value": 22163,
+        "valid_to": 1773510219000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506319000,
+      "last_status": {
+        "battery_level": 0.88
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438457000,
+        "value": 22163,
+        "valid_to": 1773442357000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3307417",
+      "id": "3307417",
+      "uuid": "636a181e-8a8a-4e91-89bd-491e4c117a93",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84101247",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507009000,
+        "value": 71333,
+        "valid_to": 1773510909000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507009000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439148000,
+        "value": 71333,
+        "valid_to": 1773443048000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3307873",
+      "id": "3307873",
+      "uuid": "d4f300cd-f1c8-44c4-b3f9-9e4098343203",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90203005",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507713000,
+        "value": 87174,
+        "valid_to": 1773511613000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507713000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438950000,
+        "value": 87161,
+        "valid_to": 1773442850000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3308307",
+      "id": "3308307",
+      "uuid": "e0257a49-4f23-43e8-b87b-126966749bce",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202339",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506765000,
+        "value": 38672,
+        "valid_to": 1773510665000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506765000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438903000,
+        "value": 38672,
+        "valid_to": 1773442803000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3309006",
+      "id": "3309006",
+      "uuid": "821c3339-90c8-4f38-abab-1bd70482cdcf",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84102261",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1763221342000,
+        "value": 355097,
+        "valid_to": 1763225242000,
+        "increment": 0
+      },
+      "last_communication_time": 1763221608000,
+      "last_status": {
+        "battery_level": 0.03
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1763156961000,
+        "value": 355097,
+        "valid_to": 1763160861000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3309089",
+      "id": "3309089",
+      "uuid": "2afbd6ff-d345-4769-a696-4c0988ff97da",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202794",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506839000,
+        "value": 39614,
+        "valid_to": 1773510739000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506839000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438976000,
+        "value": 39614,
+        "valid_to": 1773442876000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3309198",
+      "id": "3309198",
+      "uuid": "b9a713cf-b5a1-4bb4-a9e8-daa68302966c",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202105",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1766538662000,
+        "value": 121587,
+        "valid_to": 1766542562000,
+        "increment": 0
+      },
+      "last_communication_time": 1766538662000,
+      "last_status": {
+        "battery_level": 0.02
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1766526482000,
+        "value": 121587,
+        "valid_to": 1766530382000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3309556",
+      "id": "3309556",
+      "uuid": "22e25b39-15f9-49f0-89ba-59db3007e424",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202317",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507637000,
+        "value": 11089,
+        "valid_to": 1773511537000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507637000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437975000,
+        "value": 11081,
+        "valid_to": 1773441875000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3309796",
+      "id": "3309796",
+      "uuid": "00dd3ef9-e3e7-47b2-a77f-50a8f7d6e50b",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202114",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507488000,
+        "value": 2761,
+        "valid_to": 1773511388000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507488000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437884000,
+        "value": 2761,
+        "valid_to": 1773441784000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3310052",
+      "id": "3310052",
+      "uuid": "a4b80390-dc04-4ff6-b943-3a48e313d861",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84102275",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507590000,
+        "value": 125646,
+        "valid_to": 1773511490000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507590000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438828000,
+        "value": 125620,
+        "valid_to": 1773442728000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3311071",
+      "id": "3311071",
+      "uuid": "f13292b6-b843-45d7-896d-77da4f69b1c6",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90203162",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506360000,
+        "value": 29305,
+        "valid_to": 1773510260000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506360000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438497000,
+        "value": 29305,
+        "valid_to": 1773442397000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3311204",
+      "id": "3311204",
+      "uuid": "fc451e31-72d4-4a6e-8186-07eb4f0ca0a1",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202113",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1759970803000,
+        "value": 62551,
+        "valid_to": 1759974703000,
+        "increment": 0
+      },
+      "last_communication_time": 1759970803000,
+      "last_status": {
+        "battery_level": 0.01
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1759956882000,
+        "value": 62551,
+        "valid_to": 1759960782000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3311283",
+      "id": "3311283",
+      "uuid": "a39f1842-4b82-4344-9a36-172627f5ea5e",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202798",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506803000,
+        "value": 48325,
+        "valid_to": 1773510703000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506803000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438941000,
+        "value": 48325,
+        "valid_to": 1773442841000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3311328",
+      "id": "3311328",
+      "uuid": "473a42c6-c6f4-46c2-9aea-bc86b762b660",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202109",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506673000,
+        "value": 190060,
+        "valid_to": 1773510573000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506673000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438811000,
+        "value": 190060,
+        "valid_to": 1773442711000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3311421",
+      "id": "3311421",
+      "uuid": "55a54df2-d3c0-4ee6-82eb-68f82ab73eff",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202195",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506383000,
+        "value": 81131,
+        "valid_to": 1773510283000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506383000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438521000,
+        "value": 81131,
+        "valid_to": 1773442421000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3311904",
+      "id": "3311904",
+      "uuid": "a51b478b-b195-42d9-b4bd-aa69f7ba1da2",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90203042",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507754000,
+        "value": 197452,
+        "valid_to": 1773511654000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507754000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438153000,
+        "value": 197452,
+        "valid_to": 1773442053000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3311986",
+      "id": "3311986",
+      "uuid": "b7c2db14-56c7-49d8-b764-cd0e821dc46e",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202385",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506951000,
+        "value": 71094,
+        "valid_to": 1773510851000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506951000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439089000,
+        "value": 71094,
+        "valid_to": 1773442989000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3312279",
+      "id": "3312279",
+      "uuid": "29d7c658-0d82-4b61-8fc4-a321517219aa",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84102276",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1766989451000,
+        "value": 635236,
+        "valid_to": 1766993351000,
+        "increment": 0
+      },
+      "last_communication_time": 1766989451000,
+      "last_status": {
+        "battery_level": 0.02
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1766958130000,
+        "value": 635236,
+        "valid_to": 1766962030000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3312319",
+      "id": "3312319",
+      "uuid": "5f034cec-e37b-4e21-9ebf-764d11bae1bd",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202189",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507157000,
+        "value": 1518,
+        "valid_to": 1773511057000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507157000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437555000,
+        "value": 1518,
+        "valid_to": 1773441455000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3312565",
+      "id": "3312565",
+      "uuid": "61b4b27e-40ca-42e5-9ff5-ce2895859c9a",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202280",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506939000,
+        "value": 14183,
+        "valid_to": 1773510839000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506939000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439077000,
+        "value": 14183,
+        "valid_to": 1773442977000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3312566",
+      "id": "3312566",
+      "uuid": "d0557aba-3756-4a49-8cd3-6b6aecca4964",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202474",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506506000,
+        "value": 50738,
+        "valid_to": 1773510406000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506506000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438644000,
+        "value": 50738,
+        "valid_to": 1773442544000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3312796",
+      "id": "3312796",
+      "uuid": "aef12751-a791-4558-9b08-3eed763812ab",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202372",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507027000,
+        "value": 2847,
+        "valid_to": 1773510927000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507027000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439165000,
+        "value": 2847,
+        "valid_to": 1773443065000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3312945",
+      "id": "3312945",
+      "uuid": "98f0cb1a-3f40-475f-94c4-52ae3c0fa115",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84101997",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1759444703000,
+        "value": 229753,
+        "valid_to": 1759448603000,
+        "increment": 0
+      },
+      "last_communication_time": 1759444703000,
+      "last_status": {
+        "battery_level": 0.01
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1759437743000,
+        "value": 229753,
+        "valid_to": 1759441643000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3312983",
+      "id": "3312983",
+      "uuid": "1946bd3b-fb75-4e59-9672-cb014a87e34d",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84102256",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1761998154000,
+        "value": 447246,
+        "valid_to": 1762002054000,
+        "increment": 0
+      },
+      "last_communication_time": 1761998154000,
+      "last_status": {
+        "battery_level": 0.02
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1761947693000,
+        "value": 447246,
+        "valid_to": 1761951593000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3313415",
+      "id": "3313415",
+      "uuid": "e5faf7a2-7921-403d-a313-4889019773a0",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202380",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507587000,
+        "value": 58003,
+        "valid_to": 1773511487000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507587000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437985000,
+        "value": 58003,
+        "valid_to": 1773441885000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3313539",
+      "id": "3313539",
+      "uuid": "14631536-502e-41ab-9da7-7d8ee5d01570",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202111",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507736000,
+        "value": 68053,
+        "valid_to": 1773511636000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507736000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438134000,
+        "value": 68053,
+        "valid_to": 1773442034000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3313559",
+      "id": "3313559",
+      "uuid": "6e900782-b9bf-4207-9a9d-92f647a09e93",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90201869",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506193000,
+        "value": 228172,
+        "valid_to": 1773510093000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506193000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438331000,
+        "value": 228172,
+        "valid_to": 1773442231000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3314026",
+      "id": "3314026",
+      "uuid": "b3482316-1873-4d93-a2bb-4f096cdc616b",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202744",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507408000,
+        "value": 82639,
+        "valid_to": 1773511308000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507408000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437806000,
+        "value": 82639,
+        "valid_to": 1773441706000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341903",
+      "id": "3341903",
+      "uuid": "71d7931d-1f87-4ca2-ae0e-b6ca2ee3a251",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123707",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507812000,
+        "value": 193240,
+        "valid_to": 1773511712000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507812000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438210000,
+        "value": 193240,
+        "valid_to": 1773442110000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341905",
+      "id": "3341905",
+      "uuid": "af421260-83ca-4b3a-890f-ab1b9f6e0090",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123872",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507067000,
+        "value": 154955,
+        "valid_to": 1773510967000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507067000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437465000,
+        "value": 154955,
+        "valid_to": 1773441365000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341907",
+      "id": "3341907",
+      "uuid": "dadd456f-a88b-4289-ab6c-999cb10a7ab8",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123881",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506561000,
+        "value": 294734,
+        "valid_to": 1773510461000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506561000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438699000,
+        "value": 294734,
+        "valid_to": 1773442599000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341909",
+      "id": "3341909",
+      "uuid": "0b1bb8a8-b47b-446c-bcdf-d86819cd8564",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123706",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506332000,
+        "value": 49618,
+        "valid_to": 1773510232000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506332000,
+      "last_status": {
+        "battery_level": 0.87
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438470000,
+        "value": 49618,
+        "valid_to": 1773442370000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341911",
+      "id": "3341911",
+      "uuid": "d0d7bc36-7ae6-4dc2-8878-12caf6fff177",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123703",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506318000,
+        "value": 66870,
+        "valid_to": 1773510218000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506318000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438456000,
+        "value": 66870,
+        "valid_to": 1773442356000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341914",
+      "id": "3341914",
+      "uuid": "50a390f8-1ea0-4dca-b18f-a52811b937c0",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123874",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507726000,
+        "value": 199320,
+        "valid_to": 1773511626000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507726000,
+      "last_status": {
+        "battery_level": 0.84
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438124000,
+        "value": 199320,
+        "valid_to": 1773442024000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341916",
+      "id": "3341916",
+      "uuid": "2f2a8199-fd5e-4190-8ac4-6f6405abf413",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123867",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506753000,
+        "value": 117133,
+        "valid_to": 1773510653000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506753000,
+      "last_status": {
+        "battery_level": 0.88
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438891000,
+        "value": 117133,
+        "valid_to": 1773442791000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341918",
+      "id": "3341918",
+      "uuid": "76d6295e-8911-47bd-aac7-cdc25ce26bf1",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123846",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507750000,
+        "value": 122788,
+        "valid_to": 1773511650000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507750000,
+      "last_status": {
+        "battery_level": 0.89
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438148000,
+        "value": 122788,
+        "valid_to": 1773442048000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341921",
+      "id": "3341921",
+      "uuid": "38861c08-7a98-49c1-be0f-415ea5798f69",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123700",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507064000,
+        "value": 263384,
+        "valid_to": 1773510964000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507064000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437462000,
+        "value": 263384,
+        "valid_to": 1773441362000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341922",
+      "id": "3341922",
+      "uuid": "97b8c530-2710-4bce-a728-4eb22daf4f1a",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123863",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506742000,
+        "value": 26025,
+        "valid_to": 1773510642000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506742000,
+      "last_status": {
+        "battery_level": 0.89
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438881000,
+        "value": 26025,
+        "valid_to": 1773442781000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341925",
+      "id": "3341925",
+      "uuid": "6e1109a6-8ddb-44c6-99d9-83b954c3922d",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123670",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506227000,
+        "value": 170306,
+        "valid_to": 1773510127000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506227000,
+      "last_status": {
+        "battery_level": 0.87
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438365000,
+        "value": 170306,
+        "valid_to": 1773442265000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341926",
+      "id": "3341926",
+      "uuid": "53c8107f-d4b1-4e7a-a9ba-1f4ee9ce4422",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124122121",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506428000,
+        "value": 157018,
+        "valid_to": 1773510328000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506428000,
+      "last_status": {
+        "battery_level": 0.88
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438566000,
+        "value": 157018,
+        "valid_to": 1773442466000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341928",
+      "id": "3341928",
+      "uuid": "4e5231c9-396c-4ee8-a0b4-3c3b29e9ab7a",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123701",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507879000,
+        "value": 122522,
+        "valid_to": 1773511779000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507879000,
+      "last_status": {
+        "battery_level": 0.88
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438277000,
+        "value": 122522,
+        "valid_to": 1773442177000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341930",
+      "id": "3341930",
+      "uuid": "49d58849-0185-4461-a895-ecd893796dfe",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123877",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506700000,
+        "value": 251336,
+        "valid_to": 1773510600000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506700000,
+      "last_status": {
+        "battery_level": 0.88
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438838000,
+        "value": 251336,
+        "valid_to": 1773442738000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341932",
+      "id": "3341932",
+      "uuid": "25ced693-a8c8-4a87-8ded-ed872f466abc",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123704",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507101000,
+        "value": 131134,
+        "valid_to": 1773511001000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507101000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437499000,
+        "value": 131134,
+        "valid_to": 1773441399000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341934",
+      "id": "3341934",
+      "uuid": "f2acacf9-5c6e-40c5-bcb9-04d10b3f2b8a",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123691",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506723000,
+        "value": 125218,
+        "valid_to": 1773510623000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506723000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438862000,
+        "value": 125218,
+        "valid_to": 1773442762000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341936",
+      "id": "3341936",
+      "uuid": "5905b373-c488-4be7-8c87-983a1f2f2c8e",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123690",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507347000,
+        "value": 349524,
+        "valid_to": 1773511247000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507347000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437746000,
+        "value": 349524,
+        "valid_to": 1773441646000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341939",
+      "id": "3341939",
+      "uuid": "44cdf005-d4a2-4ec2-b4e5-09af1831bd5e",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123820",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507663000,
+        "value": 134362,
+        "valid_to": 1773511563000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507663000,
+      "last_status": {
+        "battery_level": 0.86
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438061000,
+        "value": 134362,
+        "valid_to": 1773441961000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341941",
+      "id": "3341941",
+      "uuid": "716d5567-b85d-4393-88fb-6108e825e762",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123687",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507687000,
+        "value": 139923,
+        "valid_to": 1773511587000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507687000,
+      "last_status": {
+        "battery_level": 0.87
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438084000,
+        "value": 139923,
+        "valid_to": 1773441984000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341950",
+      "id": "3341950",
+      "uuid": "2e571cbe-686f-420e-9cd5-f4fe4f53094c",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123720",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507749000,
+        "value": 53923,
+        "valid_to": 1773511649000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507749000,
+      "last_status": {
+        "battery_level": 0.88
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438148000,
+        "value": 53923,
+        "valid_to": 1773442048000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341954",
+      "id": "3341954",
+      "uuid": "34c811ab-731e-4928-a98a-1b9b1d3e1a28",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123708",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506736000,
+        "value": 179794,
+        "valid_to": 1773510636000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506736000,
+      "last_status": {
+        "battery_level": 0.87
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438875000,
+        "value": 179794,
+        "valid_to": 1773442775000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341956",
+      "id": "3341956",
+      "uuid": "5f9c7864-a0f6-4a2f-bc9f-2a0a43ff867b",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123870",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507078000,
+        "value": 95582,
+        "valid_to": 1773510978000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507078000,
+      "last_status": {
+        "battery_level": 0.85
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437476000,
+        "value": 95582,
+        "valid_to": 1773441376000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341958",
+      "id": "3341958",
+      "uuid": "5b8dc144-ecc3-4891-b393-df02d69d239d",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123685",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507175000,
+        "value": 168031,
+        "valid_to": 1773511075000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507175000,
+      "last_status": {
+        "battery_level": 0.87
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437572000,
+        "value": 168031,
+        "valid_to": 1773441472000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341961",
+      "id": "3341961",
+      "uuid": "891e4d7d-80f0-4e15-a36f-0c23d7e0baae",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123766",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506738000,
+        "value": 136317,
+        "valid_to": 1773510638000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506738000,
+      "last_status": {
+        "battery_level": 0.87
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438876000,
+        "value": 136317,
+        "valid_to": 1773442776000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341962",
+      "id": "3341962",
+      "uuid": "aafd069b-2507-4124-8f8a-dd3222c9cc35",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123710",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506577000,
+        "value": 169014,
+        "valid_to": 1773510477000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506577000,
+      "last_status": {
+        "battery_level": 0.87
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438715000,
+        "value": 169014,
+        "valid_to": 1773442615000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341964",
+      "id": "3341964",
+      "uuid": "9db9e160-f971-455b-81b8-4ac0ee6d5513",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123880",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506697000,
+        "value": 156007,
+        "valid_to": 1773510597000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506697000,
+      "last_status": {
+        "battery_level": 0.86
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438835000,
+        "value": 156007,
+        "valid_to": 1773442735000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341966",
+      "id": "3341966",
+      "uuid": "4ac74782-a7b1-48b3-8901-8b1b91ba18d1",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123711",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506814000,
+        "value": 155476,
+        "valid_to": 1773510714000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506814000,
+      "last_status": {
+        "battery_level": 0.86
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438952000,
+        "value": 155476,
+        "valid_to": 1773442852000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341968",
+      "id": "3341968",
+      "uuid": "2e02a990-ba58-4752-91e6-8e4fa3d05858",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123677",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506778000,
+        "value": 48666,
+        "valid_to": 1773510678000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506778000,
+      "last_status": {
+        "battery_level": 0.87
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438916000,
+        "value": 48666,
+        "valid_to": 1773442816000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341970",
+      "id": "3341970",
+      "uuid": "b241b07b-6690-4c9e-9523-58246e5a84d3",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123695",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506377000,
+        "value": 67309,
+        "valid_to": 1773510277000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506377000,
+      "last_status": {
+        "battery_level": 0.86
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438515000,
+        "value": 67309,
+        "valid_to": 1773442415000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341972",
+      "id": "3341972",
+      "uuid": "52cd3db5-7eff-414e-a29a-231e1aac7ec2",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123869",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506288000,
+        "value": 131970,
+        "valid_to": 1773510188000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506288000,
+      "last_status": {
+        "battery_level": 0.86
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438426000,
+        "value": 131970,
+        "valid_to": 1773442326000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341974",
+      "id": "3341974",
+      "uuid": "082e5a8d-c09e-4b2e-960b-b7ec776a2866",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123884",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507608000,
+        "value": 185728,
+        "valid_to": 1773511508000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507608000,
+      "last_status": {
+        "battery_level": 0.85
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438006000,
+        "value": 185728,
+        "valid_to": 1773441906000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341977",
+      "id": "3341977",
+      "uuid": "fcc8ebe6-ebfb-476b-80fc-d371deed1d39",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123771",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506160000,
+        "value": 168787,
+        "valid_to": 1773510060000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506160000,
+      "last_status": {
+        "battery_level": 0.85
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438298000,
+        "value": 168787,
+        "valid_to": 1773442198000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341978",
+      "id": "3341978",
+      "uuid": "4748498e-aa56-4475-b8d3-c9fa40b86916",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123699",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506180000,
+        "value": 49551,
+        "valid_to": 1773510080000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506180000,
+      "last_status": {
+        "battery_level": 0.87
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438318000,
+        "value": 49551,
+        "valid_to": 1773442218000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341980",
+      "id": "3341980",
+      "uuid": "e6ec74c0-2d45-4eee-a230-176d91acccac",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123770",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506683000,
+        "value": 119741,
+        "valid_to": 1773510583000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506683000,
+      "last_status": {
+        "battery_level": 0.86
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438822000,
+        "value": 119741,
+        "valid_to": 1773442722000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341982",
+      "id": "3341982",
+      "uuid": "c005fa9b-b882-4c69-adc2-d4a173d93a7a",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123673",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506603000,
+        "value": 146743,
+        "valid_to": 1773510503000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506603000,
+      "last_status": {
+        "battery_level": 0.87
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438741000,
+        "value": 146743,
+        "valid_to": 1773442641000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341984",
+      "id": "3341984",
+      "uuid": "b3effe2d-701f-4da8-92a2-153626bb8e3b",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123680",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506365000,
+        "value": 159586,
+        "valid_to": 1773510265000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506365000,
+      "last_status": {
+        "battery_level": 0.88
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438503000,
+        "value": 159586,
+        "valid_to": 1773442403000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341986",
+      "id": "3341986",
+      "uuid": "b1b2875c-0b9b-4d0f-8f31-31d4f56a4778",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124122126",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506860000,
+        "value": 89360,
+        "valid_to": 1773510760000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506860000,
+      "last_status": {
+        "battery_level": 0.85
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438999000,
+        "value": 89360,
+        "valid_to": 1773442899000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341988",
+      "id": "3341988",
+      "uuid": "7d7315ce-eb62-4cd9-9940-c4507fcb54fa",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123714",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507762000,
+        "value": 104830,
+        "valid_to": 1773511662000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507762000,
+      "last_status": {
+        "battery_level": 0.86
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438159000,
+        "value": 104830,
+        "valid_to": 1773442059000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341990",
+      "id": "3341990",
+      "uuid": "e450925e-0edd-4080-9603-2b205b203cdd",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123868",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506358000,
+        "value": 128454,
+        "valid_to": 1773510258000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506358000,
+      "last_status": {
+        "battery_level": 0.86
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438497000,
+        "value": 128454,
+        "valid_to": 1773442397000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341992",
+      "id": "3341992",
+      "uuid": "41e3793c-23f0-4ff3-951b-09116c16272b",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123885",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507308000,
+        "value": 101627,
+        "valid_to": 1773511208000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507308000,
+      "last_status": {
+        "battery_level": 0.86
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437706000,
+        "value": 101627,
+        "valid_to": 1773441606000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341994",
+      "id": "3341994",
+      "uuid": "247acce6-88d9-477b-8b2c-62d7c4ee2968",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124123833",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507549000,
+        "value": 11989,
+        "valid_to": 1773511449000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507549000,
+      "last_status": {
+        "battery_level": 0.86
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438607000,
+        "value": 11965,
+        "valid_to": 1773442507000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3341997",
+      "id": "3341997",
+      "uuid": "d7ca6c37-ebe3-401b-a055-e3ed8904f4f3",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04TG124122125",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506409000,
+        "value": 160614,
+        "valid_to": 1773510309000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506409000,
+      "last_status": {
+        "battery_level": 0.85
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438487000,
+        "value": 160593,
+        "valid_to": 1773442387000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346216",
+      "id": "3346216",
+      "uuid": "97e4ccc8-253b-43c2-9b6f-58f63e114d5d",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84102881",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507347000,
+        "value": 56516,
+        "valid_to": 1773511247000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507347000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773434266000,
+        "value": 56516,
+        "valid_to": 1773438166000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346218",
+      "id": "3346218",
+      "uuid": "7ab5beb7-dd53-4c11-b8b1-e1d83bc3057a",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202331",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507463000,
+        "value": 35799,
+        "valid_to": 1773511363000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507463000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437861000,
+        "value": 35799,
+        "valid_to": 1773441761000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346219",
+      "id": "3346219",
+      "uuid": "03b4f579-5949-4a89-80cd-bcb352346bb9",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202478",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507410000,
+        "value": 33054,
+        "valid_to": 1773511310000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507410000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437808000,
+        "value": 33054,
+        "valid_to": 1773441708000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346220",
+      "id": "3346220",
+      "uuid": "756ae075-5c41-47ba-814e-9d2324c813b5",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202196",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506386000,
+        "value": 72148,
+        "valid_to": 1773510286000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506386000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438524000,
+        "value": 72148,
+        "valid_to": 1773442424000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346221",
+      "id": "3346221",
+      "uuid": "8d9efb3a-887e-407b-997b-c92326c46d95",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202181",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507821000,
+        "value": 112969,
+        "valid_to": 1773511721000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507821000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439178000,
+        "value": 112969,
+        "valid_to": 1773443078000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346224",
+      "id": "3346224",
+      "uuid": "d103804d-cee1-4796-9d95-b797f9966979",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202776",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506381000,
+        "value": 96847,
+        "valid_to": 1773510281000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506381000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438518000,
+        "value": 96847,
+        "valid_to": 1773442418000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346226",
+      "id": "3346226",
+      "uuid": "d084a3a7-877f-468f-baf0-582ff88e0f2f",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202186",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506203000,
+        "value": 69134,
+        "valid_to": 1773510103000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506203000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438341000,
+        "value": 69134,
+        "valid_to": 1773442241000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346227",
+      "id": "3346227",
+      "uuid": "2af211f4-1400-4065-9f05-c44d812cd8c5",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202120",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507002000,
+        "value": 40441,
+        "valid_to": 1773510902000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507002000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439139000,
+        "value": 40441,
+        "valid_to": 1773443039000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346228",
+      "id": "3346228",
+      "uuid": "539f730b-e719-4683-a9ba-3e5d805a5eea",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90203181",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506382000,
+        "value": 18385,
+        "valid_to": 1773510282000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506382000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438520000,
+        "value": 18385,
+        "valid_to": 1773442420000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346229",
+      "id": "3346229",
+      "uuid": "a9ae9dff-b0b5-4e9d-a7bd-83de4d80aee7",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202108",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506328000,
+        "value": 46254,
+        "valid_to": 1773510228000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506328000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438465000,
+        "value": 46254,
+        "valid_to": 1773442365000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346230",
+      "id": "3346230",
+      "uuid": "4415d3a2-c947-43c1-8fd1-3f553f1b0989",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202112",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506712000,
+        "value": 30041,
+        "valid_to": 1773510612000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506712000,
+      "last_status": {
+        "battery_level": 0.89
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438850000,
+        "value": 30041,
+        "valid_to": 1773442750000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346231",
+      "id": "3346231",
+      "uuid": "38a20f23-f9cb-42ed-b849-70ad782aa08b",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202387",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507786000,
+        "value": 30352,
+        "valid_to": 1773511686000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507786000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438184000,
+        "value": 30352,
+        "valid_to": 1773442084000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346232",
+      "id": "3346232",
+      "uuid": "f1a9b0ea-b4d1-4bce-87e2-5bc65cfce4d2",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90201956",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507592000,
+        "value": 19638,
+        "valid_to": 1773511492000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507592000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437929000,
+        "value": 19436,
+        "valid_to": 1773441829000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346233",
+      "id": "3346233",
+      "uuid": "1ab06b76-22f3-4adb-88f7-f509736c93f0",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202115",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507837000,
+        "value": 466,
+        "valid_to": 1773511737000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507837000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439194000,
+        "value": 466,
+        "valid_to": 1773443094000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346234",
+      "id": "3346234",
+      "uuid": "39c6cde7-1d8c-4d86-b92e-3fb698a7ad36",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90201594",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507868000,
+        "value": 97925,
+        "valid_to": 1773511768000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507868000,
+      "last_status": {
+        "battery_level": 0.87
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439166000,
+        "value": 97925,
+        "valid_to": 1773443066000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346235",
+      "id": "3346235",
+      "uuid": "03294691-dea9-4ae4-872e-26a950f36682",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202305",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506303000,
+        "value": 57981,
+        "valid_to": 1773510203000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506303000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438441000,
+        "value": 57981,
+        "valid_to": 1773442341000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3346236",
+      "id": "3346236",
+      "uuid": "eb120d16-76e8-43e0-a4f0-3271a3b73462",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202116",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506199000,
+        "value": 100287,
+        "valid_to": 1773510099000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506199000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438337000,
+        "value": 100287,
+        "valid_to": 1773442237000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3347313",
+      "id": "3347313",
+      "uuid": "9c3de65b-243c-4e40-a484-14afa778298a",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202745",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507761000,
+        "value": 4587,
+        "valid_to": 1773511661000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507761000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438158000,
+        "value": 4587,
+        "valid_to": 1773442058000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3347316",
+      "id": "3347316",
+      "uuid": "1a91b31b-10c1-4016-a99b-d54e6f616cb2",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202179",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507848000,
+        "value": 18264,
+        "valid_to": 1773511748000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507848000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439146000,
+        "value": 18264,
+        "valid_to": 1773443046000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3347317",
+      "id": "3347317",
+      "uuid": "9316488e-0ebe-4f0b-918e-1e8ca25abf4b",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84101985",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1763981438000,
+        "value": 114292,
+        "valid_to": 1763985338000,
+        "increment": 1
+      },
+      "last_communication_time": 1763981438000,
+      "last_status": {
+        "battery_level": 0.95
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1763935177000,
+        "value": 114273,
+        "valid_to": 1763939077000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3347319",
+      "id": "3347319",
+      "uuid": "ae4f6764-63e7-4b14-91b4-786606d11604",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202066",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506919000,
+        "value": 39909,
+        "valid_to": 1773510819000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506919000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439057000,
+        "value": 39909,
+        "valid_to": 1773442957000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348008",
+      "id": "3348008",
+      "uuid": "76beecb0-fc80-4107-af5e-1e1ed6d6a7f8",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84101994",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507611000,
+        "value": 56370,
+        "valid_to": 1773511511000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507611000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438849000,
+        "value": 56360,
+        "valid_to": 1773442749000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348009",
+      "id": "3348009",
+      "uuid": "5b0e84c5-ddfa-4d12-a4e8-9b57836f2fb4",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202753",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506465000,
+        "value": 104080,
+        "valid_to": 1773510365000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506465000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438603000,
+        "value": 104080,
+        "valid_to": 1773442503000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348010",
+      "id": "3348010",
+      "uuid": "12aafc19-6523-479e-ae6d-ad5769c865f3",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202759",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773505362000,
+        "value": 33112,
+        "valid_to": 1773509262000,
+        "increment": 0
+      },
+      "last_communication_time": 1773505362000,
+      "last_status": {
+        "battery_level": 0.9
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439060000,
+        "value": 33112,
+        "valid_to": 1773442960000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348012",
+      "id": "3348012",
+      "uuid": "e2c843e0-19bb-4edc-b8f7-cffd0b19bf34",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90201595",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507342000,
+        "value": 198672,
+        "valid_to": 1773511242000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507342000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437739000,
+        "value": 198672,
+        "valid_to": 1773441639000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348027",
+      "id": "3348027",
+      "uuid": "ef657741-0699-4339-80e4-049662674724",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202080",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507329000,
+        "value": 73221,
+        "valid_to": 1773511229000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507329000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437727000,
+        "value": 73221,
+        "valid_to": 1773441627000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348039",
+      "id": "3348039",
+      "uuid": "4597e28d-222a-4a1f-b9a7-65bf2a2c9ec7",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90201597",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506468000,
+        "value": 106542,
+        "valid_to": 1773510368000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506468000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438606000,
+        "value": 106542,
+        "valid_to": 1773442506000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348042",
+      "id": "3348042",
+      "uuid": "2572224a-bcd2-4238-9bd9-dd08797a597f",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90203046",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773504554000,
+        "value": 47717,
+        "valid_to": 1773508454000,
+        "increment": 0
+      },
+      "last_communication_time": 1773504554000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773414070000,
+        "value": 47717,
+        "valid_to": 1773417970000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348043",
+      "id": "3348043",
+      "uuid": "d374c758-72dc-438b-b276-df57eefd7383",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90201816",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506463000,
+        "value": 38480,
+        "valid_to": 1773510363000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506463000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438602000,
+        "value": 38480,
+        "valid_to": 1773442502000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348044",
+      "id": "3348044",
+      "uuid": "fb9b9eae-b4dd-4097-aef4-199c5498d211",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202190",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1762012076000,
+        "value": 39811,
+        "valid_to": 1762015976000,
+        "increment": 0
+      },
+      "last_communication_time": 1762012076000,
+      "last_status": {
+        "battery_level": 0.95
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1761947394000,
+        "value": 39806,
+        "valid_to": 1761951294000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348045",
+      "id": "3348045",
+      "uuid": "429b9eac-0c1c-4887-aefe-7ed4a8160360",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202187",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1770896340000,
+        "value": 283,
+        "valid_to": 1770900240000,
+        "increment": 0
+      },
+      "last_communication_time": 1770896340000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1770807598000,
+        "value": 283,
+        "valid_to": 1770811498000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348046",
+      "id": "3348046",
+      "uuid": "d5c251f7-0877-4246-a359-840e081c0303",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202476",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507834000,
+        "value": 100294,
+        "valid_to": 1773511734000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507834000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439192000,
+        "value": 100294,
+        "valid_to": 1773443092000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348047",
+      "id": "3348047",
+      "uuid": "c1c1fd4a-bb61-4279-b846-368f94094ded",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202207",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507722000,
+        "value": 92519,
+        "valid_to": 1773511622000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507722000,
+      "last_status": {
+        "battery_level": 0.92
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438121000,
+        "value": 92519,
+        "valid_to": 1773442021000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348048",
+      "id": "3348048",
+      "uuid": "3a272f0e-8ce4-461f-a32d-f1c3dbd05ca5",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202194",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506436000,
+        "value": 98329,
+        "valid_to": 1773510336000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506436000,
+      "last_status": {
+        "battery_level": 0.94
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438574000,
+        "value": 98329,
+        "valid_to": 1773442474000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348049",
+      "id": "3348049",
+      "uuid": "fde73008-916a-49d4-9876-0a17c6ba172d",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202472",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507848000,
+        "value": 70159,
+        "valid_to": 1773511748000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507848000,
+      "last_status": {
+        "battery_level": 0.91
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773439146000,
+        "value": 70159,
+        "valid_to": 1773443046000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348050",
+      "id": "3348050",
+      "uuid": "568108d2-c687-4c9c-b328-16f9d4034745",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202770",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507746000,
+        "value": 57655,
+        "valid_to": 1773511646000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507746000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438144000,
+        "value": 57655,
+        "valid_to": 1773442044000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348056",
+      "id": "3348056",
+      "uuid": "6f395954-2b4a-47c5-91be-1976b09e2816",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O84101995",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773507380000,
+        "value": 1171,
+        "valid_to": 1773511280000,
+        "increment": 0
+      },
+      "last_communication_time": 1773507380000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773437777000,
+        "value": 1171,
+        "valid_to": 1773441677000,
+        "increment": 0
+      }
+    },
+    {
+      "legacy_id": "3348057",
+      "id": "3348057",
+      "uuid": "78d69134-698a-4505-a813-beb612cf8da1",
+      "location_id": "7",
+      "gateway_id": "106",
+      "virtual_sensor_id": null,
+      "type": "counter",
+      "subtype": null,
+      "name": null,
+      "vendor": "haltian",
+      "vendor_id": "TSPR04E2O90202323",
+      "previous_measurement": null,
+      "last_measurement": {
+        "time": 1773506539000,
+        "value": 48101,
+        "valid_to": 1773510439000,
+        "increment": 0
+      },
+      "last_communication_time": 1773506962000,
+      "last_status": {
+        "battery_level": 0.93
+      },
+      "active": true,
+      "day_start_value": {
+        "time": 1773438678000,
+        "value": 48101,
+        "valid_to": 1773442578000,
+        "increment": 0
+      }
+    }
+  ]
+}

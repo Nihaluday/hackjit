@@ -1,0 +1,607 @@
+[
+    {
+        "legacy_id": "10",
+        "id": "10",
+        "uuid": "1cf59e17-26e3-4d6f-89db-fb97221c06b8",
+        "name": "Metropolia",
+        "config": {
+            "uiThemes": [
+                {
+                    "name": "Metropolia",
+                    "type": "organization",
+                    "styles": {
+                        "color": {
+                            "map": [
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "map",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-map"
+                                }
+                            ],
+                            "info": [
+                                {
+                                    "hsla": "hsla(202, 84%, 41%, 1)",
+                                    "name": "main",
+                                    "value": "hsla(202, 84%, 41%, 1)",
+                                    "variable": "--color-info"
+                                },
+                                {
+                                    "hsla": "hsla(200, 68%, 50%, 1)",
+                                    "name": "light",
+                                    "value": "hsla(200, 68%, 50%, 1)",
+                                    "variable": "--color-info-light"
+                                },
+                                {
+                                    "hsla": "hsla(228, 38%, 47%, 1)",
+                                    "name": "dark",
+                                    "value": "hsla(228, 38%, 47%, 1)",
+                                    "variable": "--color-info-dark"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "font",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-info-font"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "icon",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-info-icon"
+                                }
+                            ],
+                            "error": [
+                                {
+                                    "hsla": "hsla(350, 43%, 48%, 1)",
+                                    "name": "main",
+                                    "value": "hsla(350, 43%, 48%, 1)",
+                                    "variable": "--color-error"
+                                },
+                                {
+                                    "hsla": "hsla(336, 63%, 44%, 1)",
+                                    "name": "dark",
+                                    "value": "hsla(336, 63%, 44%, 1)",
+                                    "variable": "--color-error-dark"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "font",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-error-font"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "icon",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-error-icon"
+                                }
+                            ],
+                            "input": [
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "main",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-input"
+                                },
+                                {
+                                    "hsla": "hsla(207,48%,95%,1)",
+                                    "name": "light",
+                                    "value": "hsla(207,48%,95%,1)",
+                                    "variable": "--color-input-light"
+                                },
+                                {
+                                    "hsla": "hsla(0,0%,85%,1)",
+                                    "name": "dark",
+                                    "value": "hsla(0,0%,85%,1)",
+                                    "variable": "--color-input-dark"
+                                },
+                                {
+                                    "hsla": "hsla(210,5%,16%,1)",
+                                    "name": "font",
+                                    "value": "hsla(210,5%,16%,1)",
+                                    "variable": "--color-input-font"
+                                },
+                                {
+                                    "hsla": "hsla(208,90%,45%,1)",
+                                    "name": "icon",
+                                    "value": "hsla(208,90%,45%,1)",
+                                    "variable": "--color-input-icon"
+                                },
+                                {
+                                    "hsla": "hsla(216, 10%, 50%, 1)",
+                                    "name": "placeholder",
+                                    "value": "hsla(216, 10%, 50%, 1)",
+                                    "variable": "--color-input-placeholder"
+                                }
+                            ],
+                            "label": [
+                                {
+                                    "hsla": "hsla(191, 7%, 69%, 1)",
+                                    "name": "main",
+                                    "value": "hsla(191, 7%, 69%, 1)",
+                                    "variable": "--color-label"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "font",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-label-font"
+                                }
+                            ],
+                            "action": [
+                                {
+                                    "hsla": "hsla(0, 0%, 0%, 0.04)",
+                                    "name": "hover",
+                                    "value": "hsla(0, 0%, 0%, 0.04)",
+                                    "variable": "--color-action-hover"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 0%, 0.08)",
+                                    "name": "selected",
+                                    "value": "hsla(0, 0%, 0%, 0.08)",
+                                    "variable": "--color-action-selected"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 0%, 0.12)",
+                                    "name": "focus",
+                                    "value": "hsla(0, 0%, 0%, 0.12)",
+                                    "variable": "--color-action-focus"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 0%, 0.26)",
+                                    "name": "disabled",
+                                    "value": "hsla(0, 0%, 0%, 0.26)",
+                                    "variable": "--color-action-disabled"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 0%, 0.16)",
+                                    "name": "active",
+                                    "value": "hsla(0, 0%, 0%, 0.16)",
+                                    "variable": "--color-action-active"
+                                }
+                            ],
+                            "shadow": [
+                                {
+                                    "hsla": "hsla(218, 29%, 49%, 0.5)",
+                                    "name": "shadow",
+                                    "value": "hsla(218, 29%, 49%, 0.5)",
+                                    "variable": "--color-shadow"
+                                }
+                            ],
+                            "primary": [
+                                {
+                                    "hsla": "hsla(220, 16%, 96%, 1)",
+                                    "name": "main",
+                                    "value": "hsla(220, 16%, 96%, 1)",
+                                    "variable": "--color-primary"
+                                },
+                                {
+                                    "hsla": "hsla(217,12%,87%,1)",
+                                    "name": "light",
+                                    "value": "hsla(217,12%,87%,1)",
+                                    "variable": "--color-primary-light"
+                                },
+                                {
+                                    "hsla": "hsla(240,5%,92%,1)",
+                                    "name": "dark",
+                                    "value": "hsla(240,5%,92%,1)",
+                                    "variable": "--color-primary-dark"
+                                },
+                                {
+                                    "hsla": "hsla(240,5%,33%,1)",
+                                    "name": "font",
+                                    "value": "hsla(240,5%,33%,1)",
+                                    "variable": "--color-primary-font"
+                                },
+                                {
+                                    "hsla": "hsla(208,90%,45%,1)",
+                                    "name": "icon",
+                                    "value": "hsla(208,90%,45%,1)",
+                                    "variable": "--color-primary-icon"
+                                }
+                            ],
+                            "success": [
+                                {
+                                    "hsla": "hsla(137, 40%, 61%, 1)",
+                                    "name": "main",
+                                    "value": "hsla(137, 40%, 61%, 1)",
+                                    "variable": "--color-success"
+                                },
+                                {
+                                    "hsla": "hsla(186, 77%, 24%, 1)",
+                                    "name": "dark",
+                                    "value": "hsla(186, 77%, 24%, 1)",
+                                    "variable": "--color-success-dark"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "font",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-success-font"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "icon",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-success-icon"
+                                }
+                            ],
+                            "warning": [
+                                {
+                                    "hsla": "hsla(41, 92%, 53%, 1)",
+                                    "name": "main",
+                                    "value": "hsla(41, 92%, 53%, 1)",
+                                    "variable": "--color-warning"
+                                },
+                                {
+                                    "hsla": "hsla(35, 72%, 54%, 8)",
+                                    "name": "dark",
+                                    "value": "hsla(35, 72%, 54%, 8)",
+                                    "variable": "--color-warning-dark"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "font",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-warning-font"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "icon",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-warning-icon"
+                                }
+                            ],
+                            "disabled": [
+                                {
+                                    "hsla": "hsla(184, 22%, 75%, 1)",
+                                    "name": "main",
+                                    "value": "hsla(184, 22%, 75%, 1)",
+                                    "variable": "--color-disabled"
+                                },
+                                {
+                                    "hsla": "hsla(203, 18%, 61%, 1)",
+                                    "name": "dark",
+                                    "value": "hsla(203, 18%, 61%, 1)",
+                                    "variable": "--color-disabled-dark"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "font",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-disabled-font"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "icon",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-disabled-icon"
+                                }
+                            ],
+                            "menu-bar": [
+                                {
+                                    "hsla": "hsla(224, 13%, 83%, 0.6)",
+                                    "name": "start",
+                                    "value": "hsla(224, 13%, 83%, 0.6)",
+                                    "variable": "--color-menu-bar-start"
+                                },
+                                {
+                                    "hsla": "hsla(224, 13%, 83%, 0.6)",
+                                    "name": "center",
+                                    "value": "hsla(224, 13%, 83%, 0.6)",
+                                    "variable": "--color-menu-bar-center"
+                                }
+                            ],
+                            "tertiary": [
+                                {
+                                    "hsla": "hsla(208,90%,45%,1)",
+                                    "name": "main",
+                                    "value": "hsla(208,90%,45%,1)",
+                                    "variable": "--color-tertiary"
+                                },
+                                {
+                                    "hsla": "hsla(198, 96%, 70%, 1)",
+                                    "name": "light",
+                                    "value": "hsla(198, 96%, 70%, 1)",
+                                    "variable": "--color-tertiary-light"
+                                },
+                                {
+                                    "hsla": "hsla(207,95%,30%,1)",
+                                    "name": "dark",
+                                    "value": "hsla(207,95%,30%,1)",
+                                    "variable": "--color-tertiary-dark"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "font",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-tertiary-font"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "icon",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-tertiary-icon"
+                                }
+                            ],
+                            "secondary": [
+                                {
+                                    "hsla": "hsla(196, 7%, 69%, 1)",
+                                    "name": "main",
+                                    "value": "hsla(196, 7%, 69%, 1)",
+                                    "variable": "--color-secondary"
+                                },
+                                {
+                                    "hsla": "hsla(208,90%,45%,1)",
+                                    "name": "light",
+                                    "value": "hsla(208,90%,45%,1)",
+                                    "variable": "--color-secondary-light"
+                                },
+                                {
+                                    "hsla": "hsla(207,95%,31%,1)",
+                                    "name": "dark",
+                                    "value": "hsla(207,95%,31%,1)",
+                                    "variable": "--color-secondary-dark"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "font",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-secondary-font"
+                                },
+                                {
+                                    "hsla": "hsla(207,4%,46%,1)",
+                                    "name": "icon",
+                                    "value": "hsla(207,4%,46%,1)",
+                                    "variable": "--color-secondary-icon"
+                                }
+                            ],
+                            "background": [
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "main",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-background"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 93%, 1)",
+                                    "name": "dark",
+                                    "value": "hsla(0, 0%, 93%, 1)",
+                                    "variable": "--color-background-dark"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "light",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-background-light"
+                                },
+                                {
+                                    "hsla": "hsla(208,90%,45%,1)",
+                                    "name": "icon",
+                                    "value": "hsla(208,90%,45%,1)",
+                                    "variable": "--color-background-icon"
+                                },
+                                {
+                                    "hsla": "hsla(240,3%,38%,1)",
+                                    "name": "font",
+                                    "value": "hsla(240,3%,38%,1)",
+                                    "variable": "--color-background-font"
+                                },
+                                {
+                                    "hsla": "hsla(223,13%,58%,1)",
+                                    "name": "font-light",
+                                    "value": "hsla(223,13%,58%,1)",
+                                    "variable": "--color-background-font-light"
+                                },
+                                {
+                                    "hsla": "hsla(240,3%,38%,1)",
+                                    "name": "font-dark",
+                                    "value": "hsla(240,3%,38%,1)",
+                                    "variable": "--color-background-font-dark"
+                                }
+                            ],
+                            "card-header": [
+                                {
+                                    "hsla": "hsla(249, 36%, 31%, 0.5)",
+                                    "name": "button",
+                                    "value": "hsla(249, 36%, 31%, 0.5)",
+                                    "variable": "--color-card-header-button"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "font",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-card-header-font"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 100%, 1)",
+                                    "name": "icon",
+                                    "value": "hsla(0, 0%, 100%, 1)",
+                                    "variable": "--color-card-header-icon"
+                                },
+                                {
+                                    "hsla": "hsla(0, 0%, 0%, 1)",
+                                    "name": "outline",
+                                    "value": "hsla(0, 0%, 0%, 1)",
+                                    "variable": "--color-card-header-outline"
+                                }
+                            ]
+                        }
+                    },
+                    "orgIcon": "https://upload.wikimedia.org/wikipedia/fi/thumb/6/61/Metropolia_Ammattikorkeakoulu_logo.svg/2560px-Metropolia_Ammattikorkeakoulu_logo.svg.png",
+                    "version": 2
+                }
+            ],
+            "stored_views": {
+                "Metropolia_screen_1_A": "organization_id=10&location_id=7&view.x=114.22493066330404&view.y=47.66026253966223&view.z=41.98917577473263&view.pitch=0&view.rot=-0.006399981498685925&view.move_lock=0&view.dist=42.199999999999946&view.orbit_rot_ang=4.718788961883376&view.orbit_pitch_ang=0&view.zoom_lock=0&view.rotation_lock=0&view.pitch_lock=0&view.xy_limit_min=-17.1&view.xy_limit_max=188.10000000000002&view.dist_min=8&view.dist_max=65&view.building=0&view.floor=2&view.floor_id=112000780&view.fov=2&view.aspect=1.3006198347107438&view.user_move_control=0&marker.x=114.22493066330404&marker.y=47.66026253966223&marker.z=0.1&layers=floorplan,info,room_reservation,desk_usage,co-workers&diablo=1&overhead_lock=1&url_version=1&fullscreen=1&yah_x=134.32225036621094&yah_y=49.989139556884766",
+                "Metropolia_screen_1_D": "organization_id=10&location_id=7&view.x=114.22493066330404&view.y=47.66026253966223&view.z=41.98917577473263&view.pitch=0&view.rot=-0.006399981498685925&view.move_lock=0&view.dist=42.199999999999946&view.orbit_rot_ang=4.718788961883376&view.orbit_pitch_ang=0&view.zoom_lock=0&view.rotation_lock=0&view.pitch_lock=0&view.xy_limit_min=-17.1&view.xy_limit_max=188.10000000000002&view.dist_min=8&view.dist_max=65&view.building=0&view.floor=2&view.floor_id=112000780&view.fov=2&view.aspect=1.3006198347107438&view.user_move_control=0&marker.x=114.22493066330404&marker.y=47.66026253966223&marker.z=0.1&layers=floorplan,info,room_reservation,desk_usage,co-workers&diablo=1&overhead_lock=1&url_version=1&fullscreen=1",
+                "Popjazz_infoscreen_1krs": "organization_id=10&location_id=160&view.x=18.721575158647283&view.y=-11.070360512919883&view.z=28.1824030184587&view.pitch=-0.5052433388230827&view.rot=1.1546319456101628e-14&view.move_lock=0&view.dist=35.27&view.orbit_rot_ang=4.71238898038&view.orbit_pitch_ang=0.5052433388230827&view.zoom_lock=0&view.rotation_lock=0&view.pitch_lock=0&view.xy_limit_min=-4.149&view.xy_limit_max=45.639&view.dist_min=8&view.dist_max=65&view.building=0&view.floor=2&view.floor_id=112032413&view.fov=1.0765263157894738&view.aspect=1.2074468085106382&view.user_move_control=0&marker.x=19.72157515864748&marker.y=13.517018249790094&marker.z=0.1&layers=floorplan,info,room_reservation,desk_usage,co-workers&url_version=1&fullscreen=1&yah_x=18.480606079101562&yah_y=16.358747482299805",
+                "popjazz_EB_katselulinkki": "organization_id=10&location_id=160&view.x=20.906097197189062&view.y=9.048291196388266&view.z=21.492089970005352&view.pitch=0&view.rot=-6.217248937900877e-15&view.move_lock=0&view.dist=21.599999999999998&view.orbit_rot_ang=4.712388980384696&view.orbit_pitch_ang=0&view.zoom_lock=0&view.rotation_lock=0&view.pitch_lock=0&view.xy_limit_min=-4.149&view.xy_limit_max=45.639&view.dist_min=8&view.dist_max=65&view.building=0&view.floor=1&view.floor_id=112032413&view.fov=2&view.aspect=1.4747930775018812&view.user_move_control=0&marker.x=20.906097197189062&marker.y=9.048291196388266&marker.z=0.1&layers=floorplan,info,room_reservation,desk_usage,co-workers&diablo=1&overhead_lock=1&url_version=1"
+            },
+            "defaultClientURL": "office.empathicbuilding.com",
+            "searchAssetTypes": [
+                "all",
+                "room",
+                "desk",
+                "parking",
+                "info",
+                "marker",
+                "zone",
+                "emergency",
+                "portal"
+            ],
+            "wayfindingEnabled": true,
+            "isFavoritesEnabled": true,
+            "isTeamsChatEnabled": true,
+            "isOfficeDaysEnabled": true
+        },
+        "location_sort": [
+            "7",
+            "160",
+            "592",
+            "593",
+            "643"
+        ],
+        "locations": [
+            {
+                "legacy_id": "7",
+                "id": "7",
+                "uuid": "2ac05053-6532-45d4-9614-b48164f4e31c",
+                "organization_id": "10",
+                "name": "Myllypuro",
+                "timezone": "Europe/Helsinki",
+                "config": {
+                    "addLayers": [
+                        "voice",
+                        "temperature",
+                        "co2"
+                    ],
+                    "removeLayers": [
+                        "",
+                        "co-workers-heatmap"
+                    ],
+                    "stored_views": {
+                        "default": "?organization_id=10&location_id=7&view.x=159.22399638920365&view.y=13.274220317151492&view.z=37.33652865249195&view.pitch=-0.6980000000000002&view.rot=-0.8599999999999639&view.move_lock=0&view.dist=53.47999999999999&view.orbit_rot_ang=5.572388980384654&view.orbit_pitch_ang=0.6980000000000002&view.zoom_lock=0&view.rotation_lock=0&view.pitch_lock=0&view.xy_limit_min=-17.1&view.xy_limit_max=188.10000000000002&view.dist_min=8&view.dist_max=65&view.building=0&view.floor=2&view.floor_id=112000780&view.fov=1.278736842105263&view.aspect=1.5667466027178258&marker.x=133.1762764009558&marker.y=35.69907385883393&marker.z=0.1&layers=floorplan,info,desk_usage,co-workers,temperature&url_version=1"
+                    },
+                    "wayfindingEnabled": true,
+                    "campusAutoZoomThreshold": 35,
+                    "campusAutoZoomActivation": true
+                },
+                "buildings": [
+                    "112000704"
+                ],
+                "text": "Myllypurontie 1, 00920 Helsinki",
+                "latitude": "60.223042587292106",
+                "longitude": "25.077262884784286",
+                "worldmap_info": {
+                    "file": "https://empathicbuilding.com/static/osm/10-7.osm",
+                    "exclude": {
+                        "id": []
+                    }
+                }
+            },
+            {
+                "legacy_id": "160",
+                "id": "160",
+                "uuid": "472b5d2f-3572-4a43-9b45-293e0073f316",
+                "organization_id": "10",
+                "name": "Soiva",
+                "timezone": "Europe/Helsinki",
+                "config": {
+                    "stored_views": {
+                        "default": "?organization_id=126&location_id=160&view.x=21.266484495663537&view.y=-4.0361484923787785&view.z=38.96103043596844&view.pitch=-0.2827433388230814&view.rot=0&view.move_lock=0&view.dist=42.00000000000002&view.orbit_rot_ang=4.71238898038469&view.orbit_pitch_ang=0.2827433388230814&view.zoom_lock=0&view.rotation_lock=0&view.pitch_lock=0&view.xy_limit_min=-4.149&view.xy_limit_max=45.639&view.dist_min=8&view.dist_max=65&view.building=0&view.floor=2&view.floor_id=112032413&view.fov=1.1578947368421055&view.aspect=1.3619262603461249&view.user_move_control=0&marker.x=21.26648449566354&marker.y=7.6814779612688575&marker.z=0.1&layers=floorplan,info,room_reservation,desk_usage,co-workers&url_version=1"
+                    },
+                    "campusAutoZoomThreshold": 10,
+                    "campusAutoZoomActivation": true
+                },
+                "buildings": [
+                    "112032412"
+                ],
+                "text": "Muotoilijankatu 1, 00560 Helsinki",
+                "latitude": "60.2101",
+                "longitude": "24.97669",
+                "worldmap_info": {
+                    "file": "https://empathicbuilding.com/static/osm/10-160.osm"
+                }
+            },
+            {
+                "legacy_id": "592",
+                "id": "592",
+                "uuid": "82f80ad8-dcd3-4fd0-9d16-034a62721ce4",
+                "organization_id": "10",
+                "name": "Myyrmäki",
+                "timezone": "Europe/Helsinki",
+                "config": {
+                    "stored_views": {
+                        "default": "?organization_id=10&location_id=592&view.x=58.89942799444658&view.y=7.486443072279108&view.z=45.55852594301425&view.pitch=-0.5&view.rot=0&view.move_lock=0&view.dist=55.20000000000001&view.orbit_rot_ang=4.71238898038469&view.orbit_pitch_ang=0.5&view.zoom_lock=0&view.rotation_lock=0&view.pitch_lock=0&view.xy_limit_min=-11.89276752&view.xy_limit_max=130.82044272000002&view.dist_min=8&view.dist_max=65&view.building=0&view.floor=0&view.floor_id=112332195&view.fov=1.296842105263158&view.aspect=1.5667466027178258&view.user_move_control=0&marker.x=58.89942799444659&marker.y=33.95073280323112&marker.z=0.1&layers=floorplan,info,room_reservation,desk_usage,co-workers&url_version=1"
+                    }
+                },
+                "buildings": [
+                    "112332194",
+                    "112332198",
+                    "112332199"
+                ],
+                "text": "Leiritie 1, 01600 Vantaa",
+                "latitude": "60.258832519899634",
+                "longitude": "24.844853935252942",
+                "unpublished": false,
+                "worldmap_info": {
+                    "file": "https://empathicbuilding.com/static/osm/10-592.osm"
+                }
+            },
+            {
+                "legacy_id": "593",
+                "id": "593",
+                "uuid": "12a69f48-d106-4a8b-9702-a72568ff09cd",
+                "organization_id": "10",
+                "name": "Karamalmi Campus",
+                "timezone": "Europe/Helsinki",
+                "config": {
+                    "stored_views": {
+                        "default": "?organization_id=10&location_id=593&view.x=70.91020471719334&view.y=13.575697677291167&view.z=45.22839169705039&view.pitch=-0.5&view.rot=0&view.move_lock=0&view.dist=54.80000000000002&view.orbit_rot_ang=4.71238898038469&view.orbit_pitch_ang=0.5&view.zoom_lock=0&view.rotation_lock=0&view.pitch_lock=0&view.xy_limit_min=-9.830625000000001&view.xy_limit_max=108.13687500000002&view.dist_min=2&view.dist_max=65&view.building=0&view.floor=4&view.floor_id=112332838&view.fov=1.302857142857143&view.aspect=1.5667466027178258&marker.x=70.91020471719334&marker.y=39.8482171928015&marker.z=0.1&layers=floorplan,info,room_reservation,desk_usage,co-workers&url_version=1"
+                    }
+                },
+                "buildings": [
+                    "112332830"
+                ],
+                "text": "Metropolia Karamalmi Campus, Karaportti 2, 02610 Espoo, Finland",
+                "latitude": "60.223791",
+                "longitude": "24.758372",
+                "stream_id": "78855805eb6e9d6fb976d9cd3eb05243b7957b4b",
+                "unpublished": true,
+                "worldmap_info": {
+                    "file": "https://empathicbuilding.com/static/osm/10-593.osm",
+                    "exclude": {
+                        "id": [
+                            ""
+                        ]
+                    }
+                },
+                "stream_sequence": 13604
+            },
+            {
+                "legacy_id": "643",
+                "id": "643",
+                "uuid": "6789054c-d65f-4855-b687-7ef4a4247537",
+                "organization_id": "10",
+                "name": "Arabianranta",
+                "timezone": "Europe/Helsinki",
+                "config": {
+                    "stored_views": {
+                        "default": "?organization_id=10&location_id=643&view.x=170.0677978880048&view.y=90.6225559667881&view.z=39.78117663864646&view.pitch=-0.5&view.rot=0&view.move_lock=0&view.dist=48.19999999999995&view.orbit_rot_ang=4.71238898038469&view.orbit_pitch_ang=0.5&view.zoom_lock=0&view.rotation_lock=0&view.pitch_lock=0&view.xy_limit_min=-24.19310351&view.xy_limit_max=266.12413861000005&view.dist_min=8&view.dist_max=65&view.building=0&view.floor=2&view.floor_id=112344849&view.fov=1.2231578947368416&view.aspect=1.5667466027178258&view.user_move_control=0&marker.x=170.0677978880048&marker.y=113.73086692751066&marker.z=0.1&layers=floorplan,info,room_reservation,desk_usage,co-workers&url_version=1"
+                    }
+                },
+                "buildings": [
+                    "112344848"
+                ],
+                "text": "Hämeentie 135 D, 00560 Helsinki",
+                "latitude": "60.21002604595871",
+                "longitude": "24.976756435911284",
+                "worldmap_info": {
+                    "file": "https://empathicbuilding.com/static/osm/10-643.osm"
+                }
+            }
+        ]
+    }
+]

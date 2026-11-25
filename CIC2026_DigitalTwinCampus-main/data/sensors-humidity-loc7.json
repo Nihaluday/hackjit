@@ -1,0 +1,1075 @@
+{
+  "organizationId": "10",
+  "locationId": "7",
+  "fetchedAt": "2026-03-14T17:04:47.489367Z",
+  "sensorType": "humidity",
+  "totalSensors": 41,
+  "sensors": [
+    {
+      "legacy_id": "3165072",
+      "id": "3165072",
+      "uuid": "ee280343-9b93-4966-88f1-4c9f493727da",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "A1014",
+      "vendor": "platform_of_trust",
+      "vendor_id": "A1014",
+      "previous_measurement": {
+        "time": 1748749268023,
+        "value": 0.37799999,
+        "valid_to": 1748757667935
+      },
+      "last_measurement": {
+        "time": 1748757667935,
+        "value": 0.36799999,
+        "valid_to": 1748769790538
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3165073",
+      "id": "3165073",
+      "uuid": "913d72e4-0d01-46e1-9921-f0b92b3a5111",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "A2010A",
+      "vendor": "platform_of_trust",
+      "vendor_id": "A2010A",
+      "previous_measurement": {
+        "time": 1748735769827,
+        "value": 0.35399998,
+        "valid_to": 1748769071062
+      },
+      "last_measurement": {
+        "time": 1748769071062,
+        "value": 0.34399998,
+        "valid_to": 1748769790541
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3165074",
+      "id": "3165074",
+      "uuid": "c8d4fc55-8db3-4d9a-8c8f-cb51f98b3548",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "A3018",
+      "vendor": "platform_of_trust",
+      "vendor_id": "A3018",
+      "previous_measurement": {
+        "time": 1748760668486,
+        "value": 0.34599998,
+        "valid_to": 1748767567648
+      },
+      "last_measurement": {
+        "time": 1748767567648,
+        "value": 0.33599998,
+        "valid_to": 1748769790544
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3165075",
+      "id": "3165075",
+      "uuid": "6334c369-e4a4-4f85-b8ec-c098888d91cd",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "A4018",
+      "vendor": "platform_of_trust",
+      "vendor_id": "A4018",
+      "previous_measurement": {
+        "time": 1748735769827,
+        "value": 0.34200001,
+        "valid_to": 1748760967852
+      },
+      "last_measurement": {
+        "time": 1748760967852,
+        "value": 0.33200001,
+        "valid_to": 1748769790546
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3165076",
+      "id": "3165076",
+      "uuid": "35046416-e8f5-4332-a4b6-b0a42391db1e",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "A6008",
+      "vendor": "platform_of_trust",
+      "vendor_id": "A6008",
+      "previous_measurement": {
+        "time": 1704431175728,
+        "value": 0.094,
+        "valid_to": 1704440018960
+      },
+      "last_measurement": {
+        "time": 1704440179026,
+        "value": 0.08599999,
+        "valid_to": 1704440903422
+      },
+      "last_communication_time": 1704440482809,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3193753",
+      "id": "3193753",
+      "uuid": "8696815c-16b8-48e6-8a85-6870767615ef",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "A5024",
+      "vendor": "platform_of_trust",
+      "vendor_id": "A5024",
+      "previous_measurement": {
+        "time": 1748760068113,
+        "value": 0.34599998,
+        "valid_to": 1748768168734
+      },
+      "last_measurement": {
+        "time": 1748768168734,
+        "value": 0.33599998,
+        "valid_to": 1748769790547
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236657",
+      "id": "3236657",
+      "uuid": "4f70565d-d003-47bc-840c-0e4fa84ff154",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "B2029",
+      "vendor": "platform_of_trust",
+      "vendor_id": "B2029",
+      "previous_measurement": {
+        "time": 1748735769827,
+        "value": 0.325,
+        "valid_to": 1748748968488
+      },
+      "last_measurement": {
+        "time": 1748748968488,
+        "value": 0.335,
+        "valid_to": 1748769790522
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236658",
+      "id": "3236658",
+      "uuid": "c7ab7826-9b09-4bda-8812-ff28489e59b6",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "B1005",
+      "vendor": "platform_of_trust",
+      "vendor_id": "B1005",
+      "previous_measurement": {
+        "time": 1748733668794,
+        "value": 0.34599998,
+        "valid_to": 1748735588405
+      },
+      "last_measurement": {
+        "time": 1748735769827,
+        "value": 0.34799999,
+        "valid_to": 1748769790524
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236659",
+      "id": "3236659",
+      "uuid": "51a6f587-9bbc-4c09-b58e-79f639f6fccb",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "B3018",
+      "vendor": "platform_of_trust",
+      "vendor_id": "B3018",
+      "previous_measurement": {
+        "time": 1748715667346,
+        "value": 0.37119999,
+        "valid_to": 1748735588404
+      },
+      "last_measurement": {
+        "time": 1748735769827,
+        "value": 0.36869999,
+        "valid_to": 1748769790523
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236660",
+      "id": "3236660",
+      "uuid": "212a4f5e-0a1b-4676-821a-25c88c9a4da0",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "B4028",
+      "vendor": "platform_of_trust",
+      "vendor_id": "B4028",
+      "previous_measurement": {
+        "time": 1748751369089,
+        "value": 0.33169998,
+        "valid_to": 1748766966725
+      },
+      "last_measurement": {
+        "time": 1748766966725,
+        "value": 0.3418,
+        "valid_to": 1748769790525
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236661",
+      "id": "3236661",
+      "uuid": "d2c705bf-a82d-40a9-a208-d32878686c22",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "B5003.4",
+      "vendor": "platform_of_trust",
+      "vendor_id": "B5003.4",
+      "previous_measurement": {
+        "time": 1748754974806,
+        "value": 0.37450001,
+        "valid_to": 1748756773667
+      },
+      "last_measurement": {
+        "time": 1748756773667,
+        "value": 0.36189999,
+        "valid_to": 1748769790526
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236662",
+      "id": "3236662",
+      "uuid": "a1004c57-4167-4bbc-b69e-100f2e37c424",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "C1001",
+      "vendor": "platform_of_trust",
+      "vendor_id": "C1001",
+      "previous_measurement": {
+        "time": 1748735769827,
+        "value": 0.38799999,
+        "valid_to": 1748755275815
+      },
+      "last_measurement": {
+        "time": 1748755275815,
+        "value": 0.37799999,
+        "valid_to": 1748769790528
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236663",
+      "id": "3236663",
+      "uuid": "1c2e6663-ad61-4b17-b75b-cc96b6437290",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "C2001",
+      "vendor": "platform_of_trust",
+      "vendor_id": "C2001",
+      "previous_measurement": {
+        "time": 1748700668320,
+        "value": 0.35299999,
+        "valid_to": 1748735588408
+      },
+      "last_measurement": {
+        "time": 1748735769827,
+        "value": 0.34599998,
+        "valid_to": 1748769790529
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236664",
+      "id": "3236664",
+      "uuid": "c102e3b5-2b14-4ca8-9555-4b1c52064eb6",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "C4013.A",
+      "vendor": "platform_of_trust",
+      "vendor_id": "C4013.A",
+      "previous_measurement": {
+        "time": 1748767268222,
+        "value": 0.37099998,
+        "valid_to": 1748768168734
+      },
+      "last_measurement": {
+        "time": 1748768168734,
+        "value": 0.38099998,
+        "valid_to": 1748769790532
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236665",
+      "id": "3236665",
+      "uuid": "bfd04f46-99c8-4bc3-a159-496ec5257fee",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "C3012.A",
+      "vendor": "platform_of_trust",
+      "vendor_id": "C3012.A",
+      "previous_measurement": {
+        "time": 1748757968546,
+        "value": 0.38899997999999997,
+        "valid_to": 1748765167556
+      },
+      "last_measurement": {
+        "time": 1748765167556,
+        "value": 0.37899997999999996,
+        "valid_to": 1748769790535
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236666",
+      "id": "3236666",
+      "uuid": "58d92c14-e447-4a03-9267-99a6e6723efa",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "D2013",
+      "vendor": "platform_of_trust",
+      "vendor_id": "D2013",
+      "previous_measurement": {
+        "time": 1748656571061,
+        "value": 0.37,
+        "valid_to": 1748735588409
+      },
+      "last_measurement": {
+        "time": 1748735769827,
+        "value": 0.36899997999999995,
+        "valid_to": 1748769790533
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236667",
+      "id": "3236667",
+      "uuid": "2b916a81-1279-4bc0-8494-bfce1092bd99",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "D1002",
+      "vendor": "platform_of_trust",
+      "vendor_id": "D1002",
+      "previous_measurement": {
+        "time": 1748762467251,
+        "value": 0.34639999000000005,
+        "valid_to": 1748768467128
+      },
+      "last_measurement": {
+        "time": 1748768467128,
+        "value": 0.33639999000000004,
+        "valid_to": 1748769790536
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236668",
+      "id": "3236668",
+      "uuid": "10cadbf0-043a-4c9f-bf6d-d63267c606cf",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "C5001.B",
+      "vendor": "platform_of_trust",
+      "vendor_id": "C5001.B",
+      "previous_measurement": {
+        "time": 1748672467091,
+        "value": 0.395,
+        "valid_to": 1748735588412
+      },
+      "last_measurement": {
+        "time": 1748735769827,
+        "value": 0.39599998,
+        "valid_to": 1748769790537
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236669",
+      "id": "3236669",
+      "uuid": "2940fa87-9f26-45b4-87ad-c19c66e42daf",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "D4502.E",
+      "vendor": "platform_of_trust",
+      "vendor_id": "D4502.E",
+      "previous_measurement": {
+        "time": 1748656571061,
+        "value": 0.36299999,
+        "valid_to": 1748735588413
+      },
+      "last_measurement": {
+        "time": 1748735769827,
+        "value": 0.365,
+        "valid_to": 1748769790540
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236670",
+      "id": "3236670",
+      "uuid": "4b58b3b7-90ac-4f23-945e-c35daa586ea8",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "D5502.G",
+      "vendor": "platform_of_trust",
+      "vendor_id": "D5502.G",
+      "previous_measurement": {
+        "time": 1748735769827,
+        "value": 0.38409999999999994,
+        "valid_to": 1748764868866
+      },
+      "last_measurement": {
+        "time": 1748764868866,
+        "value": 0.37380001,
+        "valid_to": 1748769790542
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3236671",
+      "id": "3236671",
+      "uuid": "64a2f3ce-988b-4984-9110-a8a7b79aaf46",
+      "location_id": "7",
+      "gateway_id": "257",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": "D3016",
+      "vendor": "platform_of_trust",
+      "vendor_id": "D3016",
+      "previous_measurement": {
+        "time": 1748735769827,
+        "value": 0.39099997999999997,
+        "valid_to": 1748763967964
+      },
+      "last_measurement": {
+        "time": 1748763967964,
+        "value": 0.3809,
+        "valid_to": 1748769790545
+      },
+      "last_communication_time": 1748769370408,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3357090",
+      "id": "3357090",
+      "uuid": "0a2b4ebd-ec5f-4443-a251-6f036b9ccd71",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "B2029",
+      "previous_measurement": {
+        "time": 1773504370740,
+        "value": 28.9,
+        "valid_to": 1773505270431
+      },
+      "last_measurement": {
+        "time": 1773505270431,
+        "value": 29.0,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3357091",
+      "id": "3357091",
+      "uuid": "86227378-6761-4d7d-9d08-2105b3a7719f",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "D5502.G",
+      "previous_measurement": {
+        "time": 1773504370740,
+        "value": 29.08,
+        "valid_to": 1773507070575
+      },
+      "last_measurement": {
+        "time": 1773507070575,
+        "value": 29.059999,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358225",
+      "id": "3358225",
+      "uuid": "3cae8bb2-7a29-4726-aa15-6c6b0de7948a",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "B1005",
+      "previous_measurement": {
+        "time": 1773506170403,
+        "value": 29.799999,
+        "valid_to": 1773507070575
+      },
+      "last_measurement": {
+        "time": 1773507070575,
+        "value": 29.9,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358226",
+      "id": "3358226",
+      "uuid": "de7a97ce-4e0d-4598-b5a7-96497ad05f96",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "B3018",
+      "previous_measurement": {
+        "time": 1773504370740,
+        "value": 29.359999,
+        "valid_to": 1773505270431
+      },
+      "last_measurement": {
+        "time": 1773505270431,
+        "value": 29.349998,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358227",
+      "id": "3358227",
+      "uuid": "7a3871a0-0b70-48c0-ab89-c62c2cfa5211",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "B4028",
+      "previous_measurement": {
+        "time": 1773498070893,
+        "value": 26.65,
+        "valid_to": 1773499870832
+      },
+      "last_measurement": {
+        "time": 1773499870832,
+        "value": 26.66,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358228",
+      "id": "3358228",
+      "uuid": "4193fee8-0dd4-462e-8586-635e03556e0b",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "B5003.4",
+      "previous_measurement": {
+        "time": 1773505270431,
+        "value": 32.719997,
+        "valid_to": 1773506170403
+      },
+      "last_measurement": {
+        "time": 1773506170403,
+        "value": 32.669998,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358229",
+      "id": "3358229",
+      "uuid": "15d7412f-e4ab-4741-9cd1-ba8a5beb1bd1",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "C1001",
+      "previous_measurement": {
+        "time": 1773506170403,
+        "value": 26.599998,
+        "valid_to": 1773507070575
+      },
+      "last_measurement": {
+        "time": 1773507070575,
+        "value": 26.099998,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358230",
+      "id": "3358230",
+      "uuid": "a0f96850-3eb8-4514-a93e-0ca118affb62",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "C2001",
+      "previous_measurement": {
+        "time": 1773506170403,
+        "value": 25.699999,
+        "valid_to": 1773507070575
+      },
+      "last_measurement": {
+        "time": 1773507070575,
+        "value": 25.799999,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358231",
+      "id": "3358231",
+      "uuid": "8f1767a8-8277-40ff-a09f-2e0dca6fa86a",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "C4013.A",
+      "previous_measurement": {
+        "time": 1773502570562,
+        "value": 28.5,
+        "valid_to": 1773507070575
+      },
+      "last_measurement": {
+        "time": 1773507070575,
+        "value": 28.4,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358232",
+      "id": "3358232",
+      "uuid": "5eb739a1-7308-4762-950c-2a5f5fff8304",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "D1002",
+      "previous_measurement": {
+        "time": 1773504370740,
+        "value": 27.699999,
+        "valid_to": 1773505270431
+      },
+      "last_measurement": {
+        "time": 1773505270431,
+        "value": 27.799999,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358233",
+      "id": "3358233",
+      "uuid": "39fada40-123b-40f9-af5e-c0df193744a0",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "D2013",
+      "previous_measurement": {
+        "time": 1773501670355,
+        "value": 27.299999,
+        "valid_to": 1773504370740
+      },
+      "last_measurement": {
+        "time": 1773504370740,
+        "value": 27.4,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358234",
+      "id": "3358234",
+      "uuid": "bfe4a361-a155-4ee1-a9c1-bcf06228812b",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "C3012.A",
+      "previous_measurement": {
+        "time": 1773498070893,
+        "value": 28.599998,
+        "valid_to": 1773505270431
+      },
+      "last_measurement": {
+        "time": 1773505270431,
+        "value": 28.699999,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358235",
+      "id": "3358235",
+      "uuid": "9da69ada-5c11-4604-b874-f578791bdbf8",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "C5001.B",
+      "previous_measurement": {
+        "time": 1773499870832,
+        "value": 29.0,
+        "valid_to": 1773501670355
+      },
+      "last_measurement": {
+        "time": 1773501670355,
+        "value": 29.099998,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358236",
+      "id": "3358236",
+      "uuid": "5700250b-d58d-48d2-859d-51d5085b7d22",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "A1014",
+      "previous_measurement": {
+        "time": 1773501670355,
+        "value": 27.699999,
+        "valid_to": 1773506170403
+      },
+      "last_measurement": {
+        "time": 1773506170403,
+        "value": 27.799999,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358237",
+      "id": "3358237",
+      "uuid": "7e20c599-925d-4aea-889d-3a56ac86685a",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "D4502.E",
+      "previous_measurement": {
+        "time": 1773503470544,
+        "value": 27.4,
+        "valid_to": 1773505270431
+      },
+      "last_measurement": {
+        "time": 1773505270431,
+        "value": 27.299999,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358238",
+      "id": "3358238",
+      "uuid": "47539e56-1a4f-435d-ac8a-81d55f4e8f0e",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "A2010A",
+      "previous_measurement": {
+        "time": 1773502570562,
+        "value": 29.199999,
+        "valid_to": 1773504370740
+      },
+      "last_measurement": {
+        "time": 1773504370740,
+        "value": 29.099998,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358239",
+      "id": "3358239",
+      "uuid": "37903f07-0aaf-4cf2-9653-1dca6531bc65",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "D3016",
+      "previous_measurement": {
+        "time": 1773505270431,
+        "value": 29.309999,
+        "valid_to": 1773506170403
+      },
+      "last_measurement": {
+        "time": 1773506170403,
+        "value": 29.33,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358240",
+      "id": "3358240",
+      "uuid": "eb42f03e-87c0-4be1-b540-fd5b70ba0941",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "A3018",
+      "previous_measurement": {
+        "time": 1773498070893,
+        "value": 31.4,
+        "valid_to": 1773500770886
+      },
+      "last_measurement": {
+        "time": 1773500770886,
+        "value": 31.5,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358241",
+      "id": "3358241",
+      "uuid": "bf532e1a-9cf9-4145-bdeb-f8f2cb01e54a",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "A4018",
+      "previous_measurement": {
+        "time": 1773494470860,
+        "value": 29.599998,
+        "valid_to": 1773503470544
+      },
+      "last_measurement": {
+        "time": 1773503470544,
+        "value": 29.699999,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    },
+    {
+      "legacy_id": "3358242",
+      "id": "3358242",
+      "uuid": "5fc750d1-1d44-41b7-9053-f5498b7a532b",
+      "location_id": "7",
+      "gateway_id": "419",
+      "virtual_sensor_id": null,
+      "type": "humidity",
+      "subtype": null,
+      "name": null,
+      "vendor": "Eeneman",
+      "vendor_id": "A5024",
+      "previous_measurement": {
+        "time": 1773498970671,
+        "value": 30.799999,
+        "valid_to": 1773503470544
+      },
+      "last_measurement": {
+        "time": 1773503470544,
+        "value": 30.9,
+        "valid_to": 1773593470575
+      },
+      "last_communication_time": 1773507070575,
+      "last_status": null,
+      "active": true
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+requests
+python-dotenv
+lark
+ifcopenshell
+aiohttp
+discord.py
